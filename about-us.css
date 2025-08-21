@@ -61,13 +61,10 @@
 
 /* Hero Image Section */
 .hero-image-section {
-    padding: 0 100px;
     margin-bottom: 80px;
 }
 
 .hero-image-container {
-    max-width: 1716px;
-    margin: 0 auto;
     height: 565px;
     overflow: hidden;
     position: relative;
