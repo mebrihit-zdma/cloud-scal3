@@ -17,11 +17,20 @@
 }
 
 /* Hero Video Section */
-.hero-video {
+.hero-section {
     margin-top: 121px;
     height: 504px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 80px;
+}
+.marketplace-video {
+    margin-top: 24px;
+    height: 1046.525px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 80px;
+    border-radius: 24px;
 }
 
 .video-container {
@@ -107,7 +116,7 @@
 /* Page Title */
 .page-title {
     text-align: center;
-    margin: 80px 0 40px 0;
+    margin: 80px 0 0px 0;
 }
 
 .page-title h1 {
