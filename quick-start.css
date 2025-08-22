@@ -188,10 +188,10 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), #C4C4C4;
+    background: url('./assets/images/hero-about-us.png');
     padding: 121px 100px;
     margin-top: 121px;
-    min-height: 696px;
+    min-height: 696p;
     display: flex;
     align-items: center;
 }
@@ -311,7 +311,7 @@ body {
 
 /* Activities Section */
 .activities-section {
-    background-color: var(--soft-white);
+    background: var(--Linear, linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%));
     padding: 98px 100px;
     border-radius: 50px;
     margin: 0 20px;
@@ -398,9 +398,11 @@ body {
     color: #333333;
 }
 
+
 .activity-icon {
     width: 22.229px;
     height: 22.229px;
+    rotate: -90deg;
 }
 
 .activity-description {
@@ -571,7 +573,7 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background-color: var(--soft-white);
+    background: var(--Linear, linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%));
     padding: 128px 138px;
     border-radius: 50px;
     margin: 0 100px;
@@ -604,7 +606,7 @@ body {
 
 .cta-buttons {
     display: flex;
-    gap: 277px;
+    gap: 24px;
 }
 
 .btn {
