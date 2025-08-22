@@ -26,9 +26,9 @@ body {
 
 /* Container */
 .container {
-    max-width: 1716px;
+    /* max-width: 1716px;
     margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 100px; */
 }
 
 /* Navigation */
@@ -162,7 +162,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #c4c4c4 0%, #a0a0a0 100%);
+    /* background: linear-gradient(135deg, #c4c4c4 0%, #a0a0a0 100%); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), #C4C4C4;
     padding: 121px 100px;
     margin-top: 121px;
     min-height: 696px;
@@ -171,8 +172,8 @@ body {
 }
 
 .hero-content {
-    max-width: 1716px;
-    margin: 0 auto;
+    /* max-width: 1716px;
+    margin: 0 auto; */
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -214,7 +215,7 @@ body {
     color: #ffffff;
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     line-height: 1.2;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 .hero-description {
@@ -225,7 +226,7 @@ body {
     opacity: 0.72;
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     line-height: 1.33;
-    max-width: 1000px;
+    /* max-width: 1000px; */
 }
 
 .hero-buttons {
@@ -253,6 +254,7 @@ body {
 .btn-white {
     background-color: #ffffff;
     color: #222222;
+    white-space: nowrap;
 }
 
 .btn-white:hover {
@@ -336,7 +338,7 @@ body {
 
 .why-divider {
     width: 1px;
-    height: 400px;
+    /* height: 400px; */
     background-color: rgba(255, 255, 255, 0.2);
     align-self: stretch;
 }
@@ -374,7 +376,7 @@ body {
 .why-tag img {
     width: 16.971px;
     height: 16.971px;
-    transform: rotate(45deg) scaleY(-1);
+    /* transform: rotate(45deg) scaleY(-1); */
 }
 
 /* Simplifies Section */
@@ -404,7 +406,7 @@ body {
 .section-header img {
     width: 16.971px;
     height: 16.971px;
-    transform: rotate(45deg) scaleY(-1);
+    /* transform: rotate(45deg) scaleY(-1); */
 }
 
 .simplifies-grid {
@@ -425,7 +427,7 @@ body {
 
 .card-image {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     height: 315px;
     overflow: hidden;
     border-radius: 40px;
@@ -453,8 +455,8 @@ body {
 }
 
 .play-overlay img {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
 }
 
 .simplify-card h4 {
@@ -492,9 +494,9 @@ body {
 /* Features Section */
 .features-section {
     padding: 48px 64px;
-    background-color: #ffffff;
     border-radius: 48px;
     margin: 0 20px;
+    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
 }
 
 .features-header {
@@ -868,9 +870,9 @@ body {
 /* CTA Section */
 .cta-section {
     padding: 128px 138px;
-    background-color: #ffffff;
     border-radius: 50px;
     margin: 0 20px 80px 20px;
+    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
 }
 
 .cta-content {
