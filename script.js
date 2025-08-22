@@ -35,8 +35,91 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-item span, .nav-item a');
+    // Dropdown menu functionality
+    const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
+    
+    dropdownItems.forEach(dropdown => {
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        const dropdownIcon = dropdown.querySelector('.dropdown-icon');
+        
+        // Toggle dropdown on click
+        dropdown.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+            
+            if (dropdown.classList.contains('active')) {
+                dropdownIcon.style.transform = 'rotate(180deg)';
+                dropdownMenu.style.opacity = '1';
+                dropdownMenu.style.visibility = 'visible';
+                dropdownMenu.style.transform = 'translateY(0)';
+            } else {
+                dropdownIcon.style.transform = 'rotate(0deg)';
+                dropdownMenu.style.opacity = '0';
+                dropdownMenu.style.visibility = 'hidden';
+                dropdownMenu.style.transform = 'translateY(-10px)';
+            }
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+                dropdownIcon.style.transform = 'rotate(0deg)';
+                dropdownMenu.style.opacity = '0';
+                dropdownMenu.style.visibility = 'hidden';
+                dropdownMenu.style.transform = 'translateY(-10px)';
+            }
+        });
+        
+        // Handle dropdown item clicks
+        const dropdownLinks = dropdown.querySelectorAll('.dropdown-item');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Add click animation
+                link.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    link.style.transform = '';
+                }, 150);
+                
+                // Handle navigation based on the link text
+                const linkText = link.textContent.trim();
+                console.log('Dropdown item clicked:', linkText);
+                
+                // You can add specific navigation logic here
+                if (linkText === 'FinOps Center') {
+                    // Navigate to FinOps Center page or scroll to FinOps section
+                    const finopsSection = document.querySelector('.product-card:first-child');
+                    if (finopsSection) {
+                        finopsSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                } else if (linkText === 'Agent Bills') {
+                    // Navigate to Agent Bills page or scroll to Agent Bills section
+                    const agentBillsSection = document.querySelector('.product-card:nth-child(2)');
+                    if (agentBillsSection) {
+                        agentBillsSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+                
+                // Close dropdown after selection
+                dropdown.classList.remove('active');
+                dropdownIcon.style.transform = 'rotate(0deg)';
+                dropdownMenu.style.opacity = '0';
+                dropdownMenu.style.visibility = 'hidden';
+                dropdownMenu.style.transform = 'translateY(-10px)';
+            });
+        });
+    });
+
+    // Smooth scrolling for navigation links (excluding dropdown items)
+    const navLinks = document.querySelectorAll('.nav-item:not(.dropdown) span, .nav-item:not(.dropdown) a');
     
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
