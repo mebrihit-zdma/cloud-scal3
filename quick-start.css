@@ -47,7 +47,7 @@ body {
     max-width: 1716px;
     margin: 0 auto;
     width: 100%;
-    gap: 381px;
+    gap: 100px;
 }
 
 .logo img {
@@ -184,14 +184,35 @@ body {
 .container {
     max-width: 1716px;
     margin: 0 auto;
+    padding: 0 100px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
 }
 
 /* Hero Section */
 .hero {
-    background: url('./assets/images/hero-about-us.png');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('./assets/images/hero-about-us.png');
+    background-size: cover;
+    background-position: center;
     padding: 121px 100px;
     margin-top: 121px;
-    min-height: 696p;
+    min-height: 696px;
     display: flex;
     align-items: center;
 }
@@ -311,7 +332,7 @@ body {
 
 /* Activities Section */
 .activities-section {
-    background: var(--Linear, linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%));
+    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
     padding: 98px 100px;
     border-radius: 50px;
     margin: 0 20px;
@@ -402,7 +423,7 @@ body {
 .activity-icon {
     width: 22.229px;
     height: 22.229px;
-    rotate: -90deg;
+    transform: rotate(-90deg);
 }
 
 .activity-description {
@@ -453,6 +474,9 @@ body {
     font-size: 21.5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .explore-btn:hover {
@@ -573,7 +597,7 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: var(--Linear, linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%));
+    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
     padding: 128px 138px;
     border-radius: 50px;
     margin: 0 100px;
@@ -621,6 +645,7 @@ body {
     gap: 8px;
     min-width: 248px;
     justify-content: center;
+    text-decoration: none;
 }
 
 .btn-white {
@@ -729,6 +754,7 @@ body {
 @media (max-width: 1200px) {
     .activities-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
     
     .resources-grid {
@@ -744,6 +770,53 @@ body {
     
     .cta-buttons {
         gap: 20px;
+        flex-direction: column;
+    }
+    
+    .mission-content {
+        gap: 60px;
+    }
+    
+    .activities-section {
+        margin: 0 10px;
+        padding: 80px 50px;
+    }
+    
+    .cta-section {
+        margin: 0 50px;
+        padding: 100px 80px;
+    }
+    
+    .hero {
+        padding: 121px 50px;
+    }
+    
+    .mission-section {
+        padding: 80px 50px;
+    }
+    
+    .resources-section {
+        padding: 80px 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        padding: 0 50px;
+    }
+    
+    .nav-container {
+        gap: 50px;
+    }
+    
+    .nav-item {
+        font-size: 20px;
+    }
+    
+    .cta-button {
+        font-size: 18px;
+        padding: 14px 24px;
+        min-width: 200px;
     }
 }
 
@@ -756,12 +829,38 @@ body {
         gap: 20px;
     }
     
+    .nav-item {
+        font-size: 18px;
+    }
+    
+    .cta-button {
+        font-size: 16px;
+        padding: 12px 20px;
+        min-width: 180px;
+    }
+    
     .hero {
         padding: 121px 20px;
+        background-size: cover;
+        background-position: center;
     }
     
     .hero-title {
         font-size: 48px;
+    }
+    
+    .breadcrumb-text {
+        font-size: 24px;
+    }
+    
+    .icon-container {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .icon-container img {
+        width: 30px;
+        height: 25px;
     }
     
     .mission-section {
@@ -781,9 +880,14 @@ body {
         font-size: 24px;
     }
     
+    .mission-tag span {
+        font-size: 24px;
+    }
+    
     .activities-section {
         padding: 60px 20px;
         margin: 0 10px;
+        border-radius: 30px;
     }
     
     .activities-title {
@@ -796,6 +900,21 @@ body {
     
     .activities-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .activity-card {
+        padding: 20px;
+        height: auto;
+        min-height: 250px;
+    }
+    
+    .activity-number {
+        font-size: 32px;
+    }
+    
+    .activity-description {
+        font-size: 20px;
     }
     
     .resources-section {
@@ -808,13 +927,65 @@ body {
         text-align: center;
     }
     
+    .resources-tag span {
+        font-size: 24px;
+    }
+    
+    .explore-btn {
+        font-size: 18px;
+        padding: 14px 28px;
+    }
+    
+    .resources-grid {
+        gap: 40px;
+    }
+    
+    .resource-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .resource-item .resource-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .featured-resource {
+        padding: 16px;
+        border-radius: 30px;
+    }
+    
+    .featured-resource h3 {
+        font-size: 32px;
+    }
+    
+    .featured-resource p {
+        font-size: 18px;
+    }
+    
+    .resource-content h4 {
+        font-size: 28px;
+    }
+    
     .cta-section {
         padding: 80px 20px;
         margin: 0 20px;
+        border-radius: 30px;
     }
     
     .cta-text h2 {
         font-size: 40px;
+    }
+    
+    .cta-text p {
+        font-size: 18px;
+    }
+    
+    .btn {
+        font-size: 18px;
+        padding: 14px 28px;
+        min-width: 200px;
     }
     
     .footer {
@@ -829,11 +1000,36 @@ body {
     .footer-menu {
         gap: 40px;
     }
+    
+    .footer-social {
+        gap: 40px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .cta-button {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
     .activities-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
     
     .nav-menu {
@@ -844,11 +1040,96 @@ body {
         font-size: 36px;
     }
     
+    .breadcrumb-text {
+        font-size: 20px;
+    }
+    
+    .icon-container {
+        width: 50px;
+        height: 50px;
+    }
+    
     .mission-left h2 {
         font-size: 32px;
     }
     
+    .mission-description {
+        font-size: 20px;
+    }
+    
+    .mission-tag span {
+        font-size: 20px;
+    }
+    
     .activities-title {
         font-size: 36px;
+    }
+    
+    .activities-description {
+        font-size: 18px;
+    }
+    
+    .header-tag span {
+        font-size: 20px;
+    }
+    
+    .activity-card {
+        padding: 16px;
+        min-height: 200px;
+    }
+    
+    .activity-number {
+        font-size: 28px;
+    }
+    
+    .activity-description {
+        font-size: 18px;
+    }
+    
+    .resources-tag span {
+        font-size: 20px;
+    }
+    
+    .explore-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+    
+    .featured-resource h3 {
+        font-size: 28px;
+    }
+    
+    .featured-resource p {
+        font-size: 16px;
+    }
+    
+    .resource-content h4 {
+        font-size: 24px;
+    }
+    
+    .cta-text h2 {
+        font-size: 32px;
+    }
+    
+    .cta-text p {
+        font-size: 16px;
+    }
+    
+    .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+        min-width: 180px;
+    }
+    
+    .footer-description {
+        font-size: 20px;
+    }
+    
+    .footer-column h4 {
+        font-size: 20px;
+    }
+    
+    .footer-column ul li {
+        font-size: 18px;
     }
 }
