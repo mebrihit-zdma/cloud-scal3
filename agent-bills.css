@@ -950,74 +950,162 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-    .container {
-        padding: 0 50px;
+@media (max-width: 1400px) {
+    .nav-container {
+        gap: 200px;
     }
     
     .hero {
         padding: 121px 50px;
     }
     
+    .why-section {
+        padding: 96px 50px;
+    }
+    
+    .features-section {
+        padding: 94px 50px;
+        margin: 0 10px;
+    }
+    
+    .how-works-section {
+        padding: 42px 50px 96px;
+    }
+    
+    .why-agent-section {
+        padding: 40px 50px 80px;
+    }
+    
+    .better-together-section {
+        padding: 177px 200px;
+    }
+    
+    .cta-section {
+        padding: 128px 80px;
+        margin: 0 10px;
+    }
+    
+    .footer {
+        padding: 69px 50px;
+    }
+    
+    .hero-title {
+        font-size: 56px;
+    }
+    
+    .section-title {
+        font-size: 64px;
+    }
+    
+    .section-title-faq {
+        font-size: 64px;
+    }
+    
+    .why-left h2 {
+        font-size: 48px;
+    }
+    
+    .cta-text h2 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-container {
+        gap: 100px;
+    }
+    
+    .hero {
+        padding: 121px 30px;
+    }
+    
+    .why-section {
+        padding: 96px 30px;
+    }
+    
+    .features-section {
+        padding: 94px 30px;
+        margin: 0 5px;
+    }
+    
+    .how-works-section {
+        padding: 42px 30px 96px;
+    }
+    
+    .why-agent-section {
+        padding: 40px 30px 80px;
+    }
+    
+    .better-together-section {
+        padding: 177px 100px;
+    }
+    
+    .cta-section {
+        padding: 128px 50px;
+        margin: 0 5px;
+    }
+    
+    .footer {
+        padding: 69px 30px;
+    }
+    
     .hero-title {
         font-size: 48px;
+    }
+    
+    .hero-description {
+        font-size: 24px;
     }
     
     .section-title {
         font-size: 56px;
     }
     
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .section-title-faq {
+        font-size: 56px;
+        white-space: normal;
     }
     
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-container {
-        gap: 20px;
-    }
-    
-    .nav-menu {
-        display: none;
-    }
-    
-    .hero-title {
+    .section-title-agent-bill,
+    .section-title-way-agent {
         font-size: 36px;
     }
     
-    .hero-description {
-        font-size: 20px;
+    .why-left h2 {
+        font-size: 40px;
     }
     
-    .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
+    .why-description {
+        font-size: 28px;
     }
     
-    .why-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .why-divider {
-        width: 100%;
-        height: 1px;
+    .cta-text h2 {
+        font-size: 44px;
     }
     
     .features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
     
     .superpowers-tabs {
         flex-direction: column;
+        gap: 8px;
+    }
+    
+    .tab {
+        width: 100%;
+        text-align: center;
     }
     
     .cta-content {
@@ -1034,5 +1122,382 @@ body {
     .footer-menu {
         flex-direction: column;
         gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+        height: 80px;
+    }
+    
+    .nav-container {
+        gap: 20px;
+    }
+    
+    .logo img {
+        height: 30px;
+        width: 85px;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 16px;
+        min-width: 160px;
+    }
+    
+    .hero {
+        padding: 80px 20px;
+        margin-top: 80px;
+        min-height: 500px;
+    }
+    
+    .why-section {
+        padding: 60px 20px;
+    }
+    
+    .features-section {
+        padding: 60px 20px;
+        margin: 0;
+        border-radius: 30px;
+    }
+    
+    .how-works-section {
+        padding: 30px 20px 60px;
+    }
+    
+    .why-agent-section {
+        padding: 30px 20px 60px;
+    }
+    
+    .better-together-section {
+        padding: 100px 20px;
+    }
+    
+    .cta-section {
+        padding: 80px 20px;
+        margin: 0;
+        border-radius: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .footer {
+        padding: 40px 20px;
+    }
+    
+    .breadcrumb {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .icon-container {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .icon-container img {
+        width: 24px;
+        height: 28px;
+    }
+    
+    .breadcrumb-text {
+        font-size: 20px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .hero-description {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    
+    .why-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .why-divider {
+        width: 100%;
+        height: 1px;
+    }
+    
+    .why-left h2 {
+        font-size: 32px;
+    }
+    
+    .why-tag span {
+        font-size: 20px;
+    }
+    
+    .why-description {
+        font-size: 20px;
+    }
+    
+    .section-header h3,
+    .section-header-agent-bill h3,
+    .section-header-way-agent h3,
+    .section-header-better-together h3 {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+    
+    .section-title-faq {
+        font-size: 36px;
+        white-space: normal;
+        margin-bottom: 24px;
+    }
+    
+    .section-title-agent-bill,
+    .section-title-way-agent {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .section-description,
+    .section-description-agent-bill,
+    .section-description-way-agent {
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .feature-card h4 {
+        font-size: 24px;
+    }
+    
+    .feature-card p {
+        font-size: 18px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 60px;
+    }
+    
+    .benefit-card {
+        padding: 32px;
+        border-radius: 30px;
+    }
+    
+    .benefit-card h4 {
+        font-size: 24px;
+    }
+    
+    .benefit-card p {
+        font-size: 18px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .stat-card {
+        padding: 32px 24px;
+        border-radius: 30px;
+    }
+    
+    .stat-card h3 {
+        font-size: 48px;
+    }
+    
+    .stat-card p {
+        font-size: 24px;
+    }
+    
+    .superpowers-tabs {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .tab {
+        width: 100%;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .tab span {
+        font-size: 20px;
+    }
+    
+    .faq-item {
+        padding: 20px 24px;
+        border-radius: 20px;
+    }
+    
+    .faq-item span {
+        font-size: 18px;
+    }
+    
+    .integration-showcase {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .integration-description {
+        font-size: 20px;
+    }
+    
+    .cta-text h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    
+    .cta-text p {
+        font-size: 16px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-left {
+        max-width: 100%;
+    }
+    
+    .footer-menu {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 60px 15px;
+    }
+    
+    .why-section {
+        padding: 40px 15px;
+    }
+    
+    .features-section {
+        padding: 40px 15px;
+    }
+    
+    .how-works-section {
+        padding: 20px 15px 40px;
+    }
+    
+    .why-agent-section {
+        padding: 20px 15px 40px;
+    }
+    
+    .better-together-section {
+        padding: 60px 15px;
+    }
+    
+    .cta-section {
+        padding: 60px 15px;
+    }
+    
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-title-faq {
+        font-size: 28px;
+    }
+    
+    .section-title-agent-bill,
+    .section-title-way-agent {
+        font-size: 24px;
+    }
+    
+    .why-left h2 {
+        font-size: 28px;
+    }
+    
+    .cta-text h2 {
+        font-size: 28px;
+    }
+    
+    .btn {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .feature-card h4 {
+        font-size: 20px;
+    }
+    
+    .feature-card p {
+        font-size: 16px;
+    }
+    
+    .benefit-card h4 {
+        font-size: 20px;
+    }
+    
+    .benefit-card p {
+        font-size: 16px;
+    }
+    
+    .stat-card h3 {
+        font-size: 36px;
+    }
+    
+    .stat-card p {
+        font-size: 20px;
+    }
+    
+    .faq-item span {
+        font-size: 16px;
+    }
+    
+    .integration-description {
+        font-size: 18px;
     }
 }
