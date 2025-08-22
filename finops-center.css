@@ -91,6 +91,7 @@ body {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-item a:hover {

@@ -21,10 +21,15 @@ body {
 /* Navigation */
 .top-nav {
     background-color: #151515;
-    padding: 20px 0;
-    position: sticky;
+    padding: 0 100px;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    height: 121px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-container {
@@ -33,7 +38,8 @@ body {
     justify-content: space-between;
     max-width: 1716px;
     margin: 0 auto;
-    padding: 0 100px;
+    width: 100%;
+    gap: 381px;
 }
 
 .logo img {
@@ -56,6 +62,9 @@ body {
     color: #ffffff;
     cursor: pointer;
     position: relative;
+}
+.menu-item span{
+    white-space: nowrap;
 }
 
 .menu-item.active {
@@ -114,11 +123,12 @@ body {
     height: 696px;
     display: flex;
     align-items: center;
-    padding: 86px 100px;
+    padding: 121px 100px 86px 100px;
     background: url('assets/images/hero-ai-bg.svg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    margin-top: 121px;
 }
 
 .hero-background {
@@ -781,28 +791,107 @@ body {
         padding: 0 50px;
     }
     
-    .nav-container {
+    .top-nav {
         padding: 0 50px;
     }
     
+    .nav-container {
+        gap: 50px;
+    }
+    
+    .nav-container .cta-button {
+        font-size: 18px;
+        padding: 14px 24px;
+        min-width: 200px;
+    }
+    
     .hero-section {
-        padding: 60px 50px;
+        padding: 121px 50px 60px 50px;
+        background-size: cover;
+        background-position: center;
     }
     
     .hero-title {
         font-size: 48px;
     }
     
+    .hero-subtitle {
+        font-size: 24px;
+    }
+    
     .section-title {
         font-size: 42px;
+    }
+    
+    .section-description {
+        font-size: 28px;
     }
     
     .process-main-title {
         font-size: 56px;
     }
     
+    .process-description {
+        font-size: 24px;
+    }
+    
+    .architecture-content {
+        gap: 60px;
+    }
+    
+    .left-architecture {
+        gap: 30px;
+    }
+    
+    .agentcore-gateway {
+        width: 280px;
+        height: 520px;
+        padding: 40px;
+    }
+    
+    .gateway-icon {
+        width: 100px;
+        height: 110px;
+    }
+    
+    .target-group {
+        gap: 60px;
+    }
+    
+    .tools-section {
+        width: 260px;
+    }
+    
+    .resources-content {
+        gap: 180px;
+    }
+    
+    .featured-article {
+        max-width: 600px;
+    }
+    
+    .article-title {
+        font-size: 36px;
+    }
+    
+    .article-excerpt {
+        font-size: 18px;
+    }
+    
     .cta-title {
         font-size: 48px;
+    }
+    
+    .cta-description {
+        font-size: 18px;
+    }
+    
+    .cta-content {
+        gap: 120px;
+    }
+    
+    .footer-menu {
+        gap: 120px;
     }
 }
 
@@ -811,10 +900,18 @@ body {
         padding: 0 20px;
     }
     
-    .nav-container {
+    .top-nav {
         padding: 0 20px;
-        flex-direction: column;
+    }
+    
+    .nav-container {
         gap: 20px;
+    }
+    
+    .nav-container .cta-button {
+        font-size: 16px;
+        padding: 12px 20px;
+        min-width: 180px;
     }
     
     .main-menu {
@@ -825,18 +922,49 @@ body {
         font-size: 18px;
     }
     
+    /* Hide dropdown icons on mobile for cleaner look */
+    .dropdown-icon {
+        display: none;
+    }
+    
     .hero-section {
-        padding: 40px 20px;
+        padding: 121px 20px 40px 20px;
         height: auto;
         min-height: 500px;
+        background-size: cover;
+        background-position: center;
     }
     
     .hero-title {
         font-size: 36px;
+        line-height: 1.3;
     }
     
     .hero-subtitle {
         font-size: 20px;
+    }
+    
+    .hero-badge {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .badge-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .badge-icon img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .hero-badge span {
+        font-size: 24px;
+    }
+    
+    .we-do-section {
+        padding: 60px 0;
     }
     
     .content-wrapper {
@@ -846,6 +974,53 @@ body {
     
     .divider {
         display: none;
+    }
+    
+    .left-content {
+        max-width: 100%;
+    }
+    
+    .right-content {
+        max-width: 100%;
+    }
+    
+    .section-title {
+        font-size: 36px;
+        line-height: 1.4;
+    }
+    
+    .section-description {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .help-link {
+        font-size: 24px;
+        gap: 15px;
+    }
+    
+    .process-section {
+        padding: 60px 0;
+    }
+    
+    .process-title {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+    
+    .process-main-title {
+        font-size: 42px;
+        line-height: 1.3;
+    }
+    
+    .process-description {
+        font-size: 20px;
+    }
+    
+    .architecture-section {
+        padding: 60px 0;
+        margin: 60px 0;
+        border-radius: 30px;
     }
     
     .architecture-content {
@@ -858,14 +1033,160 @@ body {
         gap: 20px;
     }
     
+    .agent-group {
+        gap: 12px;
+    }
+    
+    .agent-label {
+        font-size: 28px;
+    }
+    
+    .mcp-client {
+        padding: 40px 30px;
+        font-size: 32px;
+    }
+    
+    .mcp-path {
+        font-size: 20px;
+    }
+    
+    .agentcore-gateway {
+        width: 280px;
+        height: 400px;
+        padding: 30px;
+        font-size: 32px;
+        gap: 30px;
+    }
+    
+    .gateway-icon {
+        width: 80px;
+        height: 90px;
+    }
+    
+    .right-architecture {
+        gap: 60px;
+    }
+    
     .target-group {
         flex-direction: column;
         gap: 20px;
     }
     
+    .api-target,
+    .lambda-target {
+        font-size: 20px;
+        padding: 20px 16px;
+    }
+    
+    .lambda-target {
+        width: 240px;
+    }
+    
+    .tools-section {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .tools-section h3 {
+        font-size: 20px;
+    }
+    
+    .tool {
+        font-size: 20px;
+        padding: 12px;
+    }
+    
+    .resources-section {
+        padding: 60px 0;
+    }
+    
+    .resources-header {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    
+    .resources-title {
+        font-size: 24px;
+    }
+    
+    .explore-button {
+        font-size: 18px;
+        padding: 16px 32px;
+    }
+    
     .resources-content {
         flex-direction: column;
         gap: 40px;
+    }
+    
+    .featured-article {
+        max-width: 100%;
+        border-radius: 30px;
+        padding: 15px;
+    }
+    
+    .article-image {
+        height: 300px;
+        border-radius: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .article-title {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    
+    .article-excerpt {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .article-meta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .article-tag {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .article-date {
+        font-size: 16px;
+    }
+    
+    .articles-list {
+        max-width: 100%;
+        gap: 40px;
+    }
+    
+    .article-item {
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .article-item .article-image {
+        width: 100px;
+        height: 70px;
+        border-radius: 20px;
+    }
+    
+    .article-item .article-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .article-item .article-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cta-section {
+        padding: 80px 0;
+        margin: 60px 0;
+        border-radius: 30px;
     }
     
     .cta-content {
@@ -874,8 +1195,30 @@ body {
         text-align: center;
     }
     
+    .cta-title {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+    
+    .cta-description {
+        font-size: 18px;
+    }
+    
     .cta-buttons {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .cta-button {
+        width: 100%;
         justify-content: center;
+        font-size: 18px;
+        padding: 16px 32px;
+    }
+    
+    .footer {
+        padding: 40px 0;
     }
     
     .footer-content {
@@ -883,36 +1226,350 @@ body {
         gap: 40px;
     }
     
+    .footer-left {
+        max-width: 100%;
+    }
+    
+    .footer-description {
+        font-size: 20px;
+    }
+    
     .footer-menu {
         flex-direction: column;
         gap: 30px;
+        width: 100%;
+    }
+    
+    .menu-column h4 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .menu-column ul li a {
+        font-size: 18px;
+    }
+    
+    .footer-social {
+        gap: 20px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-icon img {
+        width: 28px;
+        height: 28px;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .top-nav {
+        padding: 0 15px;
+    }
+    
+    .nav-container .cta-button {
+        font-size: 14px;
+        padding: 10px 16px;
+        min-width: 160px;
+    }
+    
+    .main-menu {
+        gap: 15px;
+    }
+    
+    .menu-item {
+        font-size: 16px;
+    }
+    
+    .hero-section {
+        padding: 121px 15px 30px 15px;
+        min-height: 400px;
+    }
+    
     .hero-title {
         font-size: 28px;
+        line-height: 1.4;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .hero-badge {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .badge-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .badge-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .hero-badge span {
+        font-size: 20px;
+    }
+    
+    .hero-cta {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+    
+    .we-do-section {
+        padding: 40px 0;
+    }
+    
+    .content-wrapper {
+        gap: 30px;
+    }
+    
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
     }
     
     .section-title {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    
+    .section-description {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .help-link {
+        font-size: 20px;
+        gap: 12px;
+    }
+    
+    .process-section {
+        padding: 40px 0;
+    }
+    
+    .process-title {
+        font-size: 20px;
+        margin-bottom: 40px;
     }
     
     .process-main-title {
-        font-size: 42px;
+        font-size: 32px;
+        line-height: 1.3;
+    }
+    
+    .process-description {
+        font-size: 18px;
+    }
+    
+    .architecture-section {
+        padding: 40px 0;
+        margin: 40px 0;
+        border-radius: 20px;
+    }
+    
+    .architecture-content {
+        gap: 30px;
+    }
+    
+    .left-architecture {
+        gap: 15px;
+    }
+    
+    .agent-label {
+        font-size: 24px;
+    }
+    
+    .mcp-client {
+        padding: 30px 20px;
+        font-size: 28px;
+        border-radius: 30px;
+    }
+    
+    .mcp-path {
+        font-size: 18px;
+    }
+    
+    .agentcore-gateway {
+        width: 240px;
+        height: 320px;
+        padding: 20px;
+        font-size: 28px;
+        gap: 20px;
+        border-radius: 30px;
+    }
+    
+    .gateway-icon {
+        width: 60px;
+        height: 70px;
+    }
+    
+    .right-architecture {
+        gap: 40px;
+    }
+    
+    .target-group {
+        gap: 15px;
+    }
+    
+    .api-target,
+    .lambda-target {
+        font-size: 18px;
+        padding: 16px 12px;
+        border-radius: 8px;
+    }
+    
+    .lambda-target {
+        width: 200px;
+    }
+    
+    .tools-section {
+        max-width: 240px;
+    }
+    
+    .tools-section h3 {
+        font-size: 18px;
+    }
+    
+    .tool {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .resources-section {
+        padding: 40px 0;
+    }
+    
+    .resources-header {
+        gap: 20px;
+    }
+    
+    .resources-title {
+        font-size: 20px;
+    }
+    
+    .explore-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+    
+    .resources-content {
+        gap: 30px;
+    }
+    
+    .featured-article {
+        border-radius: 20px;
+        padding: 12px;
+    }
+    
+    .article-image {
+        height: 250px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .article-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .article-excerpt {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .article-tag {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    .article-date {
+        font-size: 14px;
+    }
+    
+    .articles-list {
+        gap: 30px;
+    }
+    
+    .article-item {
+        gap: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .article-item .article-image {
+        width: 80px;
+        height: 60px;
+        border-radius: 15px;
+    }
+    
+    .article-item .article-title {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    
+    .cta-section {
+        padding: 60px 0;
+        margin: 40px 0;
+        border-radius: 20px;
     }
     
     .cta-title {
-        font-size: 36px;
+        font-size: 28px;
+        line-height: 1.3;
     }
     
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
+    .cta-description {
+        font-size: 16px;
     }
     
     .cta-button {
-        width: 100%;
-        justify-content: center;
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+    
+    .footer {
+        padding: 30px 0;
+    }
+    
+    .footer-content {
+        gap: 30px;
+    }
+    
+    .footer-description {
+        font-size: 18px;
+    }
+    
+    .footer-menu {
+        gap: 25px;
+    }
+    
+    .menu-column h4 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .menu-column ul li a {
+        font-size: 16px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-icon img {
+        width: 24px;
+        height: 24px;
     }
 }
