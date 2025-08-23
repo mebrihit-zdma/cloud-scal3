@@ -43,11 +43,11 @@ body {
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between;
     max-width: 1716px;
-    margin: 0 auto;
+    margin: 0 auto; */
     width: 100%;
-    gap: 381px;
+    gap: 200px;
 }
 
 .logo img {
@@ -340,7 +340,7 @@ body {
     border-radius: 50px;
     padding: 40px 37px;
     width: 777px;
-    height: 746px;
+    /* height: 746px; */
     position: relative;
     border: 1px solid #7c7c7c;
 }
@@ -865,7 +865,7 @@ body {
 
 .resources-grid {
     display: flex;
-    gap: 260px;
+    gap: 100px;
 }
 
 .featured-resource {
