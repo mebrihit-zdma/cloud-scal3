@@ -1,6 +1,26 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Accordion functionality for Expertise Section
+    const superpowerItems = document.querySelectorAll('.superpower-item');
+    
+    superpowerItems.forEach(item => {
+        const header = item.querySelector('.superpower-header');
+        const expandIcon = item.querySelector('.expand-icon');
+        
+        header.addEventListener('click', () => {
+            // Close all other items
+            superpowerItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+    
     // Dropdown menu functionality
     const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
     
