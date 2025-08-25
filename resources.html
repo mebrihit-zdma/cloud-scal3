@@ -138,67 +138,43 @@
 
                 <!-- Carousel Navigation -->
                 <div class="featured-carousel-nav">
-                    <button class="carousel-btn prev" aria-label="Previous featured resource">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
-                            <path d="M30 15L20 25L30 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    
-                    <div class="carousel-indicators">
-                        <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
-                        <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
-                        <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                    <div class="carousel-filter-tabs">
+                        <button class="carousel-filter-tab active" data-filter="all">
+                            <img src="./assets/icons/carousel-icon.svg" alt="All" class="filter-icon">
+                        </button>
+                        <button class="carousel-filter-tab" data-filter="cfm">
+                            <span>CFM</span>
+                        </button>
+                        <button class="carousel-filter-tab" data-filter="finops">
+                            <span>FinOPS Center</span>
+                        </button>
+                        <button class="carousel-filter-tab" data-filter="case-study">
+                            <span>Case Study</span>
+                        </button>
+                        <button class="carousel-filter-tab" data-filter="aws-marketplace">
+                            <span>AWS Marketplace</span>
+                        </button>
                     </div>
                     
-                    <button class="carousel-btn next" aria-label="Next featured resource">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
-                            <path d="M20 15L30 25L20 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+                    <div class="carousel-pagination">
+                        <button class="carousel-btn prev" aria-label="Previous featured resource">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
+                                <path d="M30 15L20 25L30 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <button class="carousel-page-info" aria-label="Click to view page details">Page 1 of 3</button>
+                        
+                        <button class="carousel-btn next" aria-label="Next featured resource">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
+                                <path d="M20 15L30 25L20 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Filter Section -->
-        <section class="filter-section">
-            <div class="filter-container">
-                <div class="filter-tabs">
-                    <button class="filter-tab active">
-                        <img src="./assets/icons/carousel-icon.svg" alt="Carouselicon">
-                        <!-- <span>All</span> -->
-                    </button>
-                    <button class="filter-tab">
-                        <span>CFM</span>
-                    </button>
-                    <button class="filter-tab">
-                        <span>FinOPS Center</span>
-                    </button>
-                    <button class="filter-tab">
-                        <span>Case Study</span>
-                    </button>
-                    <button class="filter-tab">
-                        <span>AWS Marketplace</span>
-                    </button>
-                </div>
-                <div class="pagination">
-                    <button class="pagination-btn prev">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
-                            <path d="M30 15L20 25L30 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <span class="page-info">Page 1 of 3</span>
-                    <button class="pagination-btn next">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
-                            <path d="M20 15L30 25L20 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="filter-divider"></div>
         </section>
 
         <!-- Resources Grid -->

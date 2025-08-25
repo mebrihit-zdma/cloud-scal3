@@ -3,12 +3,24 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Featured Resource Carousel functionality
     const featuredCarousel = document.querySelector('.featured-carousel');
+    console.log('Featured carousel found:', !!featuredCarousel);
+    
     if (featuredCarousel) {
         const carouselContainer = featuredCarousel.querySelector('.featured-carousel-container');
         const slides = featuredCarousel.querySelectorAll('.featured-resource-card');
         const prevBtn = featuredCarousel.querySelector('.carousel-btn.prev');
         const nextBtn = featuredCarousel.querySelector('.carousel-btn.next');
-        const indicators = featuredCarousel.querySelectorAll('.indicator');
+        const pageInfo = featuredCarousel.querySelector('.carousel-page-info');
+        const filterTabs = featuredCarousel.querySelectorAll('.carousel-filter-tab');
+        
+        console.log('Carousel elements found:', {
+            container: !!carouselContainer,
+            slides: slides.length,
+            prevBtn: !!prevBtn,
+            nextBtn: !!nextBtn,
+            pageInfo: !!pageInfo,
+            filterTabs: filterTabs.length
+        });
         
         let currentSlide = 0;
         const totalSlides = slides.length;
@@ -18,14 +30,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize carousel
         function initCarousel() {
             console.log('Initializing carousel with', totalSlides, 'slides');
-            updateSlidePositions();
-            updateNavigation();
-            startAutoPlay();
+            
+            // Set initial state
+            currentSlide = 0;
+            isTransitioning = false;
             
             // Make sure the first slide is visible
             if (slides.length > 0) {
                 slides[0].classList.add('active');
             }
+            
+            updateSlidePositions();
+            updateNavigation();
+            // Auto-play is disabled - carousel only responds to manual navigation
         }
         
         // Update slide positions
@@ -42,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            console.log('Updated slide positions. Current slide:', currentSlide);
+            console.log('Updated slide positions. Current slide:', currentSlide, 'Total slides:', totalSlides);
         }
         
         // Get previous slide index
@@ -59,14 +76,12 @@ document.addEventListener('DOMContentLoaded', function() {
         function goToSlide(index) {
             if (isTransitioning || index === currentSlide) return;
             
+            console.log('Going to slide:', index);
             isTransitioning = true;
             currentSlide = index;
             
             updateSlidePositions();
             updateNavigation();
-            
-            // Reset auto-play timer
-            resetAutoPlay();
             
             // Remove transition flag after animation completes
             setTimeout(() => {
@@ -86,10 +101,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update navigation state
         function updateNavigation() {
-            // Update indicators
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
-            });
+            // Update page info
+            if (pageInfo) {
+                pageInfo.textContent = `Page ${currentSlide + 1} of ${totalSlides}`;
+            }
             
             // Update button states
             if (prevBtn) {
@@ -100,26 +115,115 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Auto-play functionality
+        // Auto-play functionality - DISABLED
         function startAutoPlay() {
-            autoPlayInterval = setInterval(() => {
-                if (!isTransitioning) {
-                    nextSlide();
-                }
-            }, 5000); // Change slide every 5 seconds
+            // Auto-play is disabled - carousel only responds to manual navigation
+            console.log('Auto-play is disabled');
         }
         
         function resetAutoPlay() {
-            if (autoPlayInterval) {
-                clearInterval(autoPlayInterval);
-                startAutoPlay();
-            }
+            // Auto-play is disabled
         }
         
         function stopAutoPlay() {
-            if (autoPlayInterval) {
-                clearInterval(autoPlayInterval);
+            // Auto-play is disabled
+        }
+        
+        // Show page options dropdown
+        function showPageOptions() {
+            // Remove existing dropdown if any
+            const existingDropdown = document.querySelector('.page-options-dropdown');
+            if (existingDropdown) {
+                existingDropdown.remove();
             }
+            
+            // Create dropdown container
+            const dropdown = document.createElement('div');
+            dropdown.className = 'page-options-dropdown';
+            dropdown.style.cssText = `
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #222222;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                border-radius: 12px;
+                padding: 8px;
+                z-index: 1000;
+                min-width: 120px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                margin-top: 8px;
+            `;
+            
+            // Create page options
+            for (let i = 1; i <= totalSlides; i++) {
+                const pageOption = document.createElement('button');
+                pageOption.className = 'page-option';
+                pageOption.textContent = `Page ${i}`;
+                pageOption.setAttribute('data-page', i);
+                pageOption.style.cssText = `
+                    display: block;
+                    width: 100%;
+                    padding: 8px 16px;
+                    background: ${i === currentSlide + 1 ? 'var(--primary-green)' : 'transparent'};
+                    color: ${i === currentSlide + 1 ? '#151515' : '#ffffff'};
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-family: 'Onest', sans-serif;
+                    font-size: 16px;
+                    text-align: left;
+                    transition: all 0.2s ease;
+                    margin-bottom: 2px;
+                `;
+                
+                // Add hover effects
+                pageOption.addEventListener('mouseenter', function() {
+                    if (i !== currentSlide + 1) {
+                        this.style.background = 'rgba(255, 255, 255, 0.1)';
+                    }
+                });
+                
+                pageOption.addEventListener('mouseleave', function() {
+                    if (i !== currentSlide + 1) {
+                        this.style.background = 'transparent';
+                    }
+                });
+                
+                // Add click handler with better event handling
+                pageOption.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const pageNumber = parseInt(this.getAttribute('data-page'));
+                    console.log('Clicked page:', pageNumber);
+                    goToSlide(pageNumber - 1);
+                    dropdown.remove();
+                });
+                
+                dropdown.appendChild(pageOption);
+            }
+            
+            // Position the dropdown relative to the page info button
+            pageInfo.style.position = 'relative';
+            pageInfo.appendChild(dropdown);
+            
+            // Close dropdown when clicking outside
+            setTimeout(() => {
+                document.addEventListener('click', function closeDropdown(e) {
+                    if (!pageInfo.contains(e.target)) {
+                        dropdown.remove();
+                        document.removeEventListener('click', closeDropdown);
+                    }
+                });
+            }, 100);
+            
+            // Add escape key to close dropdown
+            document.addEventListener('keydown', function closeOnEscape(e) {
+                if (e.key === 'Escape') {
+                    dropdown.remove();
+                    document.removeEventListener('keydown', closeOnEscape);
+                }
+            });
         }
         
         // Event listeners
@@ -131,13 +235,33 @@ document.addEventListener('DOMContentLoaded', function() {
             nextBtn.addEventListener('click', nextSlide);
         }
         
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => goToSlide(index));
+        // Page info click functionality
+        if (pageInfo) {
+            pageInfo.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Page info clicked, showing dropdown...');
+                // Show a modal or dropdown with page options
+                showPageOptions();
+            });
+        }
+        
+        // Filter tab functionality
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Here you would typically filter the carousel content based on the selected category
+                const filter = this.getAttribute('data-filter');
+                console.log('Filter selected:', filter);
+                // For now, just log the filter selection
+            });
         });
         
-        // Pause auto-play on hover
-        featuredCarousel.addEventListener('mouseenter', stopAutoPlay);
-        featuredCarousel.addEventListener('mouseleave', startAutoPlay);
+        // Auto-play is disabled - no hover events needed
         
         // Keyboard navigation for carousel
         featuredCarousel.addEventListener('keydown', (e) => {
@@ -179,6 +303,31 @@ document.addEventListener('DOMContentLoaded', function() {
         // Initialize the carousel with a small delay to ensure DOM is ready
         setTimeout(() => {
             initCarousel();
+            
+            // Test the carousel functionality
+            console.log('Carousel initialized. Testing navigation...');
+            console.log('Total slides:', totalSlides);
+            console.log('Current slide:', currentSlide);
+            
+            // Add a test button for debugging (remove in production)
+            const testButton = document.createElement('button');
+            testButton.textContent = 'Test Page 2';
+            testButton.style.cssText = `
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 9999;
+                background: red;
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            `;
+            testButton.addEventListener('click', () => {
+                console.log('Test button clicked - going to page 2');
+                goToSlide(1);
+            });
+            document.body.appendChild(testButton);
         }, 100);
     }
 
