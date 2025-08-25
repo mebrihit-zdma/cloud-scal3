@@ -3,53 +3,40 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Featured Resource Carousel functionality
     const featuredCarousel = document.querySelector('.featured-carousel');
-    console.log('Featured carousel found:', !!featuredCarousel);
     
     if (featuredCarousel) {
-        const carouselContainer = featuredCarousel.querySelector('.featured-carousel-container');
         const slides = featuredCarousel.querySelectorAll('.featured-resource-card');
         const prevBtn = featuredCarousel.querySelector('.carousel-btn.prev');
         const nextBtn = featuredCarousel.querySelector('.carousel-btn.next');
         const pageInfo = featuredCarousel.querySelector('.carousel-page-info');
         const filterTabs = featuredCarousel.querySelectorAll('.carousel-filter-tab');
         
-        console.log('Carousel elements found:', {
-            container: !!carouselContainer,
-            slides: slides.length,
-            prevBtn: !!prevBtn,
-            nextBtn: !!nextBtn,
-            pageInfo: !!pageInfo,
-            filterTabs: filterTabs.length
-        });
-        
         let currentSlide = 0;
         let currentFilter = 'all';
         let filteredSlides = Array.from(slides);
-        let isTransitioning = false;
+        
+        console.log('Carousel initialized with', slides.length, 'slides');
         
         // Initialize carousel
         function initCarousel() {
-            console.log('Initializing carousel with', slides.length, 'total slides');
+            // Hide all slides except the first one
+            slides.forEach((slide, index) => {
+                if (index === 0) {
+                    slide.style.display = 'flex';
+                    slide.classList.add('active');
+                } else {
+                    slide.style.display = 'none';
+                    slide.classList.remove('active');
+                }
+            });
             
-            // Set initial state
-            currentSlide = 0;
-            currentFilter = 'all';
-            filteredSlides = Array.from(slides);
-            isTransitioning = false;
-            
-            // Make sure the first slide is visible
-            if (slides.length > 0) {
-                slides[0].classList.add('active');
-            }
-            
-            updateSlidePositions();
             updateNavigation();
             updateFilterDisplay();
         }
         
         // Filter slides based on category
         function filterSlides(category) {
-            console.log('Filtering slides by category:', category);
+            console.log('Filtering by:', category);
             currentFilter = category;
             currentSlide = 0;
             
@@ -65,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Hide all slides first
             slides.forEach(slide => {
-                slide.classList.remove('active', 'prev', 'next');
                 slide.style.display = 'none';
+                slide.classList.remove('active');
             });
             
             // Show filtered slides
@@ -77,66 +64,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            updateSlidePositions();
             updateNavigation();
             updateFilterDisplay();
         }
         
-        // Update slide positions
-        function updateSlidePositions() {
-            filteredSlides.forEach((slide, index) => {
-                slide.classList.remove('active', 'prev', 'next');
-                
-                if (index === currentSlide) {
-                    slide.classList.add('active');
-                } else if (index === getPrevIndex()) {
-                    slide.classList.add('prev');
-                } else if (index === getNextIndex()) {
-                    slide.classList.add('next');
-                }
-            });
-            
-            console.log('Updated slide positions. Current slide:', currentSlide, 'Filtered slides:', filteredSlides.length);
-        }
-        
-        // Get previous slide index
-        function getPrevIndex() {
-            return currentSlide === 0 ? filteredSlides.length - 1 : currentSlide - 1;
-        }
-        
-        // Get next slide index
-        function getNextIndex() {
-            return currentSlide === filteredSlides.length - 1 ? 0 : currentSlide + 1;
-        }
-        
         // Go to specific slide
         function goToSlide(index) {
-            if (isTransitioning || index === currentSlide || index < 0 || index >= filteredSlides.length) return;
+            if (index < 0 || index >= filteredSlides.length) return;
             
             console.log('Going to slide:', index);
-            isTransitioning = true;
             currentSlide = index;
             
-            updateSlidePositions();
-            updateNavigation();
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+                slide.classList.remove('active');
+            });
             
-            // Remove transition flag after animation completes
-            setTimeout(() => {
-                isTransitioning = false;
-            }, 600);
+            // Show current slide
+            const currentSlideElement = filteredSlides[currentSlide];
+            currentSlideElement.style.display = 'flex';
+            currentSlideElement.classList.add('active');
+            
+            updateNavigation();
         }
         
         // Go to next slide
         function nextSlide() {
             if (filteredSlides.length > 1) {
-                goToSlide(getNextIndex());
+                const nextIndex = (currentSlide + 1) % filteredSlides.length;
+                goToSlide(nextIndex);
             }
         }
         
         // Go to previous slide
         function prevSlide() {
             if (filteredSlides.length > 1) {
-                goToSlide(getPrevIndex());
+                const prevIndex = currentSlide === 0 ? filteredSlides.length - 1 : currentSlide - 1;
+                goToSlide(prevIndex);
             }
         }
         
@@ -145,15 +110,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Update page info
             if (pageInfo) {
                 pageInfo.textContent = `Page ${currentSlide + 1} of ${filteredSlides.length}`;
-                console.log('Updated page info:', pageInfo.textContent);
             }
             
             // Update button states
             if (prevBtn) {
-                prevBtn.disabled = isTransitioning || filteredSlides.length <= 1;
+                prevBtn.disabled = filteredSlides.length <= 1;
             }
             if (nextBtn) {
-                nextBtn.disabled = isTransitioning || filteredSlides.length <= 1;
+                nextBtn.disabled = filteredSlides.length <= 1;
             }
         }
         
@@ -230,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 
-                // Add click handler with better event handling
+                // Add click handler
                 pageOption.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
