@@ -248,16 +248,12 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 84.615%), 
-                linear-gradient(132.652deg, rgba(24, 36, 67, 0.4) 29.826%, rgba(69, 74, 54, 0.8) 74.257%), 
-                url('./assets/images/hero-bg.png');
-    background-size: auto, auto, 100% 155.19%;
-    background-position: 0% 0%, 0% 0%, 0% 65.75%;
-    height: 696px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), #C4C4C4;
+    padding: 121px 100px;
+    margin-top: 121px;
+    min-height: 696px;
     display: flex;
     align-items: center;
-    padding: 0 100px;
-    margin-top: 121px;
 }
 
 .hero-content {
@@ -265,9 +261,127 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-container {
+    background-color: #292929;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.icon-container img {
+    width: 30.386px;
+    height: 32px;
+}
+
+.breadcrumb-text {
+    font-family: 'Onest', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-title {
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+    font-size: 64px;
+    color: #ffffff;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-family: 'Onest', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--soft-white);
+    opacity: 0.72;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.33;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Button Styles */
+.btn {
+    padding: 16px 24px;
+    border-radius: 33.444px;
+    font-family: 'Onest', sans-serif;
+    font-weight: 600;
+    font-size: 21.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #222222;
+    white-space: nowrap;
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-green {
+    background-color: var(--primary-green);
+    color: #222222;
+}
+
+.btn-green:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(151, 244, 186, 0.3);
+}
+
+.btn-outline {
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #dfdfdf;
+}
+
+.btn-outline:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+.btn-outline img {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-dark {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+/* Legacy hero icon styles for backward compatibility */
 .hero-icon {
     display: grid;
     place-items: start;
@@ -296,14 +410,6 @@ body {
 .icon-inner img {
     width: 27px;
     height: 27px;
-}
-
-.hero-title {
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 1;
-    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px;
-    max-width: 1181px;
 }
 
 /* Section Headers */
@@ -1162,11 +1268,15 @@ body {
 /* Responsive Design */
 @media (max-width: 1200px) {
     .hero {
-        padding: 0 50px;
+        padding: 121px 50px;
     }
     
     .hero-title {
         font-size: 48px;
+    }
+    
+    .hero-description {
+        font-size: 24px;
     }
     
     .products-grid {
@@ -1228,7 +1338,8 @@ body {
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 20px;
+        padding: 0 20px;
+        height: 80px;
     }
     
     .nav-menu {
@@ -1236,12 +1347,53 @@ body {
     }
     
     .hero {
-        padding: 0 20px;
-        height: 500px;
+        padding: 80px 20px;
+        min-height: 500px;
+        margin-top: 80px;
+    }
+    
+    .hero-content {
+        gap: 30px;
+    }
+    
+    .breadcrumb {
+        gap: 15px;
+    }
+    
+    .icon-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icon-container img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .breadcrumb-text {
+        font-size: 20px;
     }
     
     .hero-title {
         font-size: 36px;
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .btn {
+        justify-content: center;
+        font-size: 18px;
+        padding: 14px 20px;
     }
     
     .mission {

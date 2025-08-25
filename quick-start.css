@@ -27,18 +27,6 @@ body {
 }
 
 /* Navigation styles are now handled by styles.css */
-    left: 0;
-    background-color: var(--dark-gray);
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 8px 0;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 1001;
-}
 
 /* Dropdown styles are now handled by styles.css */
 
@@ -89,59 +77,7 @@ body {
     }
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('./assets/images/hero-about-us.png');
-    background-size: cover;
-    background-position: center;
-    padding: 121px 100px;
-    margin-top: 121px;
-    min-height: 696px;
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    max-width: 1716px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 40px;
-}
-
-.icon-container {
-    background-color: var(--dark-gray);
-    border-radius: 25px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-container img {
-    width: 40px;
-    height: 33.6px;
-}
-
-.breadcrumb-text {
-    font-size: 28px;
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 500;
-}
-
-.hero-title {
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 1.2;
-    max-width: 1307px;
-    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px;
-}
+/* Hero Section styles are now handled by styles.css */
 
 /* Mission Section */
 .mission-section {
@@ -671,9 +607,7 @@ body {
         padding: 100px 80px;
     }
     
-    .hero {
-        padding: 121px 50px;
-    }
+    /* Hero responsive styles are now handled by styles.css */
     
     .mission-section {
         padding: 80px 50px;
@@ -723,29 +657,7 @@ body {
         min-width: 180px;
     }
     
-    .hero {
-        padding: 121px 20px;
-        background-size: cover;
-        background-position: center;
-    }
-    
-    .hero-title {
-        font-size: 48px;
-    }
-    
-    .breadcrumb-text {
-        font-size: 24px;
-    }
-    
-    .icon-container {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .icon-container img {
-        width: 30px;
-        height: 25px;
-    }
+    /* Hero responsive styles are now handled by styles.css */
     
     .mission-section {
         padding: 60px 20px;
@@ -920,18 +832,7 @@ body {
         display: none;
     }
     
-    .hero-title {
-        font-size: 36px;
-    }
-    
-    .breadcrumb-text {
-        font-size: 20px;
-    }
-    
-    .icon-container {
-        width: 50px;
-        height: 50px;
-    }
+    /* Hero responsive styles are now handled by styles.css */
     
     .mission-left h2 {
         font-size: 32px;
