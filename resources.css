@@ -1,21 +1,6 @@
 /* Resources Page Specific Styles */
 
-/* Active Navigation Indicator */
-.nav-item.active {
-    position: relative;
-}
-
-.nav-item.active .active-indicator {
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 3px;
-    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
-    /* background-color: var(--primary-green); */
-    border-radius: 32px;
-}
+/* Navigation styles are now handled by styles.css */
 
 /* Hero Video Section */
 .hero-section {

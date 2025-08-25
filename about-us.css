@@ -1,25 +1,6 @@
 /* About Us Page Specific Styles */
 
-/* Active Navigation Indicator */
-.nav-item.active {
-    position: relative;
-    font-weight: 700;
-}
-
-.nav-item.active span {
-    color: var(--white);
-}
-
-.active-indicator {
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 106px;
-    height: 3px;
-    /* border-radius: 32px; */
-    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
-}
+/* Navigation styles are now handled by styles.css */
 
 /* About Hero Section */
 .about-hero {
