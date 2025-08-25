@@ -216,7 +216,7 @@
     max-width: 1716px;
     margin: 0 auto;
     display: flex;
-    gap: 260px;
+    gap: 100px;
 }
 
 .featured-resource {

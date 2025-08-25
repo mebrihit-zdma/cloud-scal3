@@ -425,7 +425,7 @@ body {
 
 .learn-more-btn {
     background: var(--primary-green);
-    color: var(--dark-gray);
+    color: var(--dark-gray) !important;
     border: none;
     padding: 16px 24px;
     border-radius: 33px;
@@ -437,6 +437,7 @@ body {
     align-self: flex-start;
     display: inline-block;
     text-decoration: none;
+    margin-top: 40px;
 }
 
 .learn-more-btn:hover {
@@ -529,6 +530,11 @@ body {
     display: flex;
     gap: 48px;
     align-items: flex-start;
+}
+.expertise-container-image{
+    width: 50%;
+    height: 500%;
+    object-fit: contain;
 }
 .expertise {
     padding: 40px 100px;
