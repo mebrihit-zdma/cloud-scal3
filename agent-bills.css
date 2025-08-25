@@ -501,6 +501,17 @@ body {
     background-color: var(--white);
     border: 1px solid #e0e0e0;
     border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+}
+
+.faq-item:hover {
+    border-color: var(--primary-green);
+    box-shadow: 0 4px 12px rgba(151, 244, 186, 0.2);
+}
+
+.faq-question {
     padding: 24px 36px;
     display: flex;
     align-items: center;
@@ -509,25 +520,69 @@ body {
     transition: all 0.3s ease;
 }
 
-.faq-item:hover {
-    border-color: var(--primary-green);
-    box-shadow: 0 4px 12px rgba(151, 244, 186, 0.2);
+.faq-question:hover {
+    background-color: rgba(151, 244, 186, 0.05);
 }
 
-.faq-item span {
+.faq-question span {
     font-size: 27.2px;
     color: var(--gray-0);
     line-height: 1.56;
+    font-weight: 500;
 }
 
-.faq-item img {
-    /* width: 36px;
-    height: 36px; */
+.faq-icon {
+    width: 24px;
+    height: 24px;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
-.faq-item:hover img {
+.faq-item.active .faq-icon {
     transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 0 36px 24px;
+}
+
+.faq-answer p {
+    font-size: 18px;
+    color: var(--gray-0);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive design for FAQ section */
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 20px 24px;
+    }
+    
+    .faq-question span {
+        font-size: 20px;
+    }
+    
+    .faq-answer {
+        padding: 0 24px 20px !important;
+    }
+    
+    .faq-answer p {
+        font-size: 16px;
+    }
+    
+    .faq-icon {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 /* Why Agent Section */
