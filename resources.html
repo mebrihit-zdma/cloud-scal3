@@ -80,21 +80,83 @@
                 <div class="video-title">AWS Marketplace</div>
             </div>
         </section>
-        <!-- Featured Resource -->
+        <!-- Featured Resource Carousel -->
         <section class="featured-resource-section">
-            <div class="featured-resource-card">
-                <div class="featured-content">
-                    <div class="featured-text">
-                        <h2>Product documentation for AWS Marketplace</h2>
-                        <p>A case study of how one ISV leveraged AWS Marketplace to scale their SaaS solution rapidly. Lorem Ipsum is simply dummy text that has been used since the 1500s</p>
-                        <button class="view-button">
-                            <span>View</span>
-                            <img src="./assets/icons/arrow-link.svg" alt="View link">
-                        </button>
+            <div class="featured-carousel">
+                <div class="featured-carousel-container">
+                    <!-- Featured Resource Card 1 -->
+                    <div class="featured-resource-card active">
+                        <div class="featured-content">
+                            <div class="featured-text">
+                                <h2>Product documentation for AWS Marketplace</h2>
+                                <p>A case study of how one ISV leveraged AWS Marketplace to scale their SaaS solution rapidly. Lorem Ipsum is simply dummy text that has been used since the 1500s</p>
+                                <button class="view-button">
+                                    <span>View</span>
+                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
+                                </button>
+                            </div>
+                            <div class="featured-image">
+                                <img src="./assets/images/aws-documentation.svg" alt="AWS Marketplace Documentation">
+                            </div>
+                        </div>
                     </div>
-                    <div class="featured-image">
-                        <img src="./assets/images/aws-documentation.svg" alt="AWS Marketplace Documentation">
+
+                    <!-- Featured Resource Card 2 -->
+                    <div class="featured-resource-card">
+                        <div class="featured-content">
+                            <div class="featured-text">
+                                <h2>FinOps Center Implementation Guide</h2>
+                                <p>Comprehensive guide to implementing FinOps Center for optimal cloud cost management. Learn best practices and strategies for maximizing your cloud investment.</p>
+                                <button class="view-button">
+                                    <span>View</span>
+                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
+                                </button>
+                            </div>
+                            <div class="featured-image">
+                                <img src="./assets/images/cs3-dashboard.svg" alt="FinOps Center Dashboard">
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Featured Resource Card 3 -->
+                    <div class="featured-resource-card">
+                        <div class="featured-content">
+                            <div class="featured-text">
+                                <h2>AI Agent Development Framework</h2>
+                                <p>Master the art of building intelligent AI agents with our comprehensive framework. From concept to deployment, everything you need to know.</p>
+                                <button class="view-button">
+                                    <span>View</span>
+                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
+                                </button>
+                            </div>
+                            <div class="featured-image">
+                                <img src="./assets/images/brain.svg" alt="AI Agent Framework">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation -->
+                <div class="featured-carousel-nav">
+                    <button class="carousel-btn prev" aria-label="Previous featured resource">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
+                            <path d="M30 15L20 25L30 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                    </div>
+                    
+                    <button class="carousel-btn next" aria-label="Next featured resource">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
+                            <path d="M20 15L30 25L20 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
