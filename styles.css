@@ -43,8 +43,8 @@ body {
 .nav-container {
     display: flex;
     align-items: center;
-    /* justify-content: space-between;
-    max-width: 1716px;
+    justify-content: space-between;
+    /* max-width: 1716px;
     margin: 0 auto; */
     width: 100%;
     gap: 200px;
@@ -58,8 +58,8 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 20px;
-    flex: 1;
+    gap: 64px;
+    /* flex: 1; */
     justify-content: space-between;
 }
 
@@ -72,6 +72,7 @@ body {
     cursor: pointer;
     transition: color 0.3s ease;
     font-family: 'Onest', sans-serif;
+    white-space: nowrap;
 }
 
 .nav-item:hover {
@@ -99,8 +100,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 120px;
-    height: 3px;
-    background-color: var(--primary-green);
+    height: 4px;
+    background: var(--Linear, linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%));
     border-radius: 32px;
 }
 
