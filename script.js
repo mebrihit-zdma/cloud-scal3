@@ -8,8 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
         const dropdownIcon = dropdown.querySelector('.dropdown-icon');
         
-        // Toggle dropdown on click
+        // Toggle dropdown on click (but not on dropdown items)
         dropdown.addEventListener('click', (e) => {
+            // Don't toggle if clicking on a dropdown item
+            if (e.target.classList.contains('dropdown-item')) {
+                return;
+            }
+            
             e.preventDefault();
             dropdown.classList.toggle('active');
             
@@ -41,9 +46,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const dropdownLinks = dropdown.querySelectorAll('.dropdown-item');
         dropdownLinks.forEach(link => {
             link.addEventListener('click', (e) => {
+                // Stop event propagation to prevent parent dropdown from handling it
+                e.stopPropagation();
+                
                 // If it's an anchor tag with href, allow normal navigation
                 if (link.tagName === 'A' && link.href) {
                     console.log('Allowing navigation to:', link.href);
+                    // Close dropdown before navigation
+                    dropdown.classList.remove('active');
+                    dropdownIcon.style.transform = 'rotate(0deg)';
+                    dropdownMenu.style.opacity = '0';
+                    dropdownMenu.style.visibility = 'hidden';
+                    dropdownMenu.style.transform = 'translateY(-10px)';
                     // Don't prevent default - let the browser handle the navigation
                     return;
                 }
@@ -117,4 +131,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     console.log('Cloud Scal3 website loaded successfully!');
+    
+    // Debug: Test FinOps Center link
+    const finopsLink = document.querySelector('a[href="finops-center.html"]');
+    if (finopsLink) {
+        console.log('FinOps Center link found:', finopsLink);
+        finopsLink.addEventListener('click', (e) => {
+            console.log('FinOps Center link clicked!');
+        });
+    } else {
+        console.warn('FinOps Center link not found!');
+    }
 });
