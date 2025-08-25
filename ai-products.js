@@ -1,4 +1,4 @@
-// All Products Page JavaScript
+// AI Products Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('js-enabled');
     
     // Initialize any third-party libraries or plugins here
-    console.log('All Products page initialized successfully');
+    console.log('AI Products page initialized successfully');
 });
 
 // Utility functions
