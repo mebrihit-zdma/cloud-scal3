@@ -854,10 +854,7 @@ body {
         font-size: 18px;
     }
     
-    /* Hide dropdown icons on mobile for cleaner look */
-    .dropdown-icon {
-        display: none;
-    }
+    /* Mobile dropdown styles are now handled by styles.css */
     
     /* Mobile navigation adjustments */
     .nav-container {

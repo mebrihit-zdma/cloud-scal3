@@ -865,10 +865,7 @@ body {
         font-size: 18px;
     }
     
-    /* Hide dropdown icons on mobile for cleaner look */
-    .dropdown-icon {
-        display: none;
-    }
+    /* Mobile dropdown styles are now handled by styles.css */
     
     .hero-section {
         padding: 121px 20px 40px 20px;

@@ -38,11 +38,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.dropdown-item:hover,
-.dropdown-item.active {
-    background-color: #333333;
-    color: var(--primary-green);
-}
+/* Dropdown styles are now handled by styles.css */
 
 .cta-button {
     background-color: var(--primary-green);

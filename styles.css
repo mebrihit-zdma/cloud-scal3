@@ -213,6 +213,11 @@ body {
         color: var(--primary-green);
         padding-left: 25px;
     }
+    
+    /* Hide dropdown icons on mobile for cleaner look */
+    .dropdown-icon {
+        display: none;
+    }
 }
 
 .cta-button {

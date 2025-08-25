@@ -40,29 +40,7 @@ body {
     z-index: 1001;
 }
 
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown-item {
-    display: block;
-    padding: 8px 16px;
-    color: var(--white);
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-
-.dropdown-item:hover {
-    background-color: #333;
-}
-
-.dropdown-item.active {
-    background-color: var(--primary-green);
-    color: var(--dark-gray);
-}
+/* Dropdown styles are now handled by styles.css */
 
 .cta-button {
     background-color: var(--primary-green);
