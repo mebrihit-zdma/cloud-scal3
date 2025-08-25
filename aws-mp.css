@@ -860,6 +860,30 @@ body {
     .footer-menu {
         gap: 120px;
     }
+    
+    .we-do-section {
+        padding: 80px 0;
+    }
+    
+    .content-wrapper {
+        gap: 60px;
+    }
+    
+    .services-section {
+        padding: 60px 0;
+    }
+    
+    .faq-section {
+        margin: 60px 0;
+    }
+    
+    .cta-section {
+        margin: 60px 0;
+    }
+    
+    .resources-section {
+        padding: 60px 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -892,6 +916,20 @@ body {
     /* Hide dropdown icons on mobile for cleaner look */
     .dropdown-icon {
         display: none;
+    }
+    
+    /* Mobile navigation adjustments */
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-menu {
+        order: 2;
+    }
+    
+    .cta-button {
+        order: 3;
     }
     
     .hero-section {
@@ -930,6 +968,11 @@ body {
         font-size: 24px;
     }
     
+    .hero-cta {
+        font-size: 18px;
+        padding: 16px 32px;
+    }
+    
     .we-do-section {
         padding: 60px 0;
     }
@@ -966,6 +1009,12 @@ body {
         gap: 15px;
     }
     
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
     .services-section {
         padding: 60px 0;
     }
@@ -994,6 +1043,17 @@ body {
         margin-bottom: 16px;
     }
     
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 24px;
+    }
+    
+    .service-icon img {
+        width: 30px;
+        height: 30px;
+    }
+    
     .faq-section {
         padding: 40px 0;
         margin: 60px 0;
@@ -1017,6 +1077,11 @@ body {
     .faq-answer {
         font-size: 20px;
         padding: 0 24px 20px 24px;
+    }
+    
+    .faq-icon {
+        width: 30px;
+        height: 30px;
     }
     
     .cta-section {
@@ -1051,6 +1116,10 @@ body {
         justify-content: center;
         font-size: 18px;
         padding: 16px 32px;
+    }
+    
+    .cta-section {
+        margin: 0 20px;
     }
     
     .resources-section {
@@ -1140,6 +1209,11 @@ body {
         gap: 10px;
     }
     
+    .article-item .article-image {
+        width: 80px;
+        height: 80px;
+    }
+    
     .footer {
         padding: 40px 0;
     }
@@ -1185,6 +1259,10 @@ body {
         width: 28px;
         height: 28px;
     }
+    
+    .footer {
+        margin: 0 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1208,6 +1286,15 @@ body {
     
     .menu-item {
         font-size: 16px;
+    }
+    
+    .nav-container {
+        gap: 10px;
+    }
+    
+    .logo img {
+        height: 32px;
+        width: 90px;
     }
     
     .hero-section {
@@ -1248,6 +1335,10 @@ body {
         padding: 14px 28px;
     }
     
+    .hero-content {
+        max-width: 100%;
+    }
+    
     .we-do-section {
         padding: 40px 0;
     }
@@ -1275,6 +1366,10 @@ body {
     .help-link {
         font-size: 20px;
         gap: 12px;
+    }
+    
+    .we-do-section {
+        margin: 0 15px;
     }
     
     .services-section {
@@ -1305,6 +1400,21 @@ body {
         margin-bottom: 12px;
     }
     
+    .services-section {
+        margin: 0 15px;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .service-icon img {
+        width: 25px;
+        height: 25px;
+    }
+    
     .faq-section {
         padding: 30px 0;
         margin: 40px 0;
@@ -1330,6 +1440,15 @@ body {
         padding: 0 20px 16px 20px;
     }
     
+    .faq-section {
+        margin: 0 15px;
+    }
+    
+    .faq-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
     .cta-section {
         padding: 60px 0;
         margin: 40px 0;
@@ -1348,6 +1467,10 @@ body {
     .cta-button {
         font-size: 16px;
         padding: 12px 24px;
+    }
+    
+    .cta-section {
+        margin: 0 15px;
     }
     
     .resources-section {
@@ -1421,6 +1544,10 @@ body {
         line-height: 1.3;
     }
     
+    .resources-section {
+        margin: 0 15px;
+    }
+    
     .footer {
         padding: 30px 0;
     }
@@ -1454,5 +1581,9 @@ body {
     .social-icon img {
         width: 24px;
         height: 24px;
+    }
+    
+    .footer {
+        margin: 0 15px;
     }
 }
