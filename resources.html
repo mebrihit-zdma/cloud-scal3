@@ -84,11 +84,11 @@
         <section class="featured-resource-section">
             <div class="featured-carousel">
                 <div class="featured-carousel-container">
-                    <!-- Featured Resource Card 1 -->
-                    <div class="featured-resource-card active">
+                    <!-- Featured Resource Card 1 - CFM -->
+                    <div class="featured-resource-card active" data-category="all">
                         <div class="featured-content">
                             <div class="featured-text">
-                                <h2>Product documentation for AWS Marketplace</h2>
+                                <h2>1. Product documentation for AWS Marketplace</h2>
                                 <p>A case study of how one ISV leveraged AWS Marketplace to scale their SaaS solution rapidly. Lorem Ipsum is simply dummy text that has been used since the 1500s</p>
                                 <button class="view-button">
                                     <span>View</span>
@@ -96,16 +96,33 @@
                                 </button>
                             </div>
                             <div class="featured-image">
-                                <img src="./assets/images/aws-documentation.svg" alt="AWS Marketplace Documentation">
+                                <img src="./assets/images/aws-documentation.svg" alt="AI Agent Framework">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Featured Resource Card 2 -->
-                    <div class="featured-resource-card">
+                    <!-- Featured Resource Card 2 - CFM -->
+                    <div class="featured-resource-card" data-category="cfm">
                         <div class="featured-content">
                             <div class="featured-text">
-                                <h2>FinOps Center Implementation Guide</h2>
+                                <h2>2. CFM Best Practices Guide</h2>
+                                <p>Essential guide to Cloud Financial Management (CFM) best practices. Learn how to optimize costs and maximize value from your cloud investments.</p>
+                                <button class="view-button">
+                                    <span>View</span>
+                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
+                                </button>
+                            </div>
+                            <div class="featured-image">
+                                <img src="./assets/images/business.svg" alt="CFM Best Practices">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Resource Card 3 - FinOps Center -->
+                    <div class="featured-resource-card" data-category="finops">
+                        <div class="featured-content">
+                            <div class="featured-text">
+                                <h2>3. FinOps Center Implementation Guide</h2>
                                 <p>Comprehensive guide to implementing FinOps Center for optimal cloud cost management. Learn best practices and strategies for maximizing your cloud investment.</p>
                                 <button class="view-button">
                                     <span>View</span>
@@ -113,24 +130,41 @@
                                 </button>
                             </div>
                             <div class="featured-image">
-                                <img src="./assets/images/cs3-dashboard.svg" alt="FinOps Center Dashboard">
+                                <img src="./assets/images/labtop.svg" alt="FinOps Center Dashboard">
                             </div>
                         </div>
                     </div>
 
-                    <!-- Featured Resource Card 3 -->
-                    <div class="featured-resource-card">
+                    <!-- Featured Resource Card 4 - Case Study -->
+                    <div class="featured-resource-card" data-category="case-study">
                         <div class="featured-content">
                             <div class="featured-text">
-                                <h2>AI Agent Development Framework</h2>
-                                <p>Master the art of building intelligent AI agents with our comprehensive framework. From concept to deployment, everything you need to know.</p>
+                                <h2>4. Cloud Cost Optimization Case Study</h2>
+                                <p>Real-world case study showing how a Fortune 500 company reduced their cloud costs by 40% using our FinOps Center solution.</p>
                                 <button class="view-button">
                                     <span>View</span>
                                     <img src="./assets/icons/arrow-link.svg" alt="View link">
                                 </button>
                             </div>
                             <div class="featured-image">
-                                <img src="./assets/images/brain.svg" alt="AI Agent Framework">
+                                <img src="./assets/images/marketing.svg" alt="Cloud Cost Optimization">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Resource Card 5 - AWS Marketplace -->
+                    <div class="featured-resource-card" data-category="aws-marketplace">
+                        <div class="featured-content">
+                            <div class="featured-text">
+                                <h2>5. Product documentation for AWS Marketplace</h2>
+                                <p>A case study of how one ISV leveraged AWS Marketplace to scale their SaaS solution rapidly. Lorem Ipsum is simply dummy text that has been used since the 1500s</p>
+                                <button class="view-button">
+                                    <span>View</span>
+                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
+                                </button>
+                            </div>
+                            <div class="featured-image">
+                                <img src="./assets/images/analytics.svg" alt="AWS Marketplace Documentation">
                             </div>
                         </div>
                     </div>
@@ -164,7 +198,7 @@
                             </svg>
                         </button>
                         
-                        <button class="carousel-page-info" aria-label="Click to view page details">Page 1 of 3</button>
+                        <button class="carousel-page-info" aria-label="Click to view page details">Page 1 of 5</button>
                         
                         <button class="carousel-btn next" aria-label="Next featured resource">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">

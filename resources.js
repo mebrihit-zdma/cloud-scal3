@@ -23,16 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         let currentSlide = 0;
-        const totalSlides = slides.length;
+        let currentFilter = 'all';
+        let filteredSlides = Array.from(slides);
         let isTransitioning = false;
-        let autoPlayInterval;
         
         // Initialize carousel
         function initCarousel() {
-            console.log('Initializing carousel with', totalSlides, 'slides');
+            console.log('Initializing carousel with', slides.length, 'total slides');
             
             // Set initial state
             currentSlide = 0;
+            currentFilter = 'all';
+            filteredSlides = Array.from(slides);
             isTransitioning = false;
             
             // Make sure the first slide is visible
@@ -42,12 +44,47 @@ document.addEventListener('DOMContentLoaded', function() {
             
             updateSlidePositions();
             updateNavigation();
-            // Auto-play is disabled - carousel only responds to manual navigation
+            updateFilterDisplay();
+        }
+        
+        // Filter slides based on category
+        function filterSlides(category) {
+            console.log('Filtering slides by category:', category);
+            currentFilter = category;
+            currentSlide = 0;
+            
+            if (category === 'all') {
+                filteredSlides = Array.from(slides);
+            } else {
+                filteredSlides = Array.from(slides).filter(slide => 
+                    slide.getAttribute('data-category') === category
+                );
+            }
+            
+            console.log('Filtered slides count:', filteredSlides.length);
+            
+            // Hide all slides first
+            slides.forEach(slide => {
+                slide.classList.remove('active', 'prev', 'next');
+                slide.style.display = 'none';
+            });
+            
+            // Show filtered slides
+            filteredSlides.forEach((slide, index) => {
+                slide.style.display = 'flex';
+                if (index === 0) {
+                    slide.classList.add('active');
+                }
+            });
+            
+            updateSlidePositions();
+            updateNavigation();
+            updateFilterDisplay();
         }
         
         // Update slide positions
         function updateSlidePositions() {
-            slides.forEach((slide, index) => {
+            filteredSlides.forEach((slide, index) => {
                 slide.classList.remove('active', 'prev', 'next');
                 
                 if (index === currentSlide) {
@@ -59,22 +96,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            console.log('Updated slide positions. Current slide:', currentSlide, 'Total slides:', totalSlides);
+            console.log('Updated slide positions. Current slide:', currentSlide, 'Filtered slides:', filteredSlides.length);
         }
         
         // Get previous slide index
         function getPrevIndex() {
-            return currentSlide === 0 ? totalSlides - 1 : currentSlide - 1;
+            return currentSlide === 0 ? filteredSlides.length - 1 : currentSlide - 1;
         }
         
         // Get next slide index
         function getNextIndex() {
-            return currentSlide === totalSlides - 1 ? 0 : currentSlide + 1;
+            return currentSlide === filteredSlides.length - 1 ? 0 : currentSlide + 1;
         }
         
         // Go to specific slide
         function goToSlide(index) {
-            if (isTransitioning || index === currentSlide) return;
+            if (isTransitioning || index === currentSlide || index < 0 || index >= filteredSlides.length) return;
             
             console.log('Going to slide:', index);
             isTransitioning = true;
@@ -91,42 +128,45 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Go to next slide
         function nextSlide() {
-            goToSlide(getNextIndex());
+            if (filteredSlides.length > 1) {
+                goToSlide(getNextIndex());
+            }
         }
         
         // Go to previous slide
         function prevSlide() {
-            goToSlide(getPrevIndex());
+            if (filteredSlides.length > 1) {
+                goToSlide(getPrevIndex());
+            }
         }
         
         // Update navigation state
         function updateNavigation() {
             // Update page info
             if (pageInfo) {
-                pageInfo.textContent = `Page ${currentSlide + 1} of ${totalSlides}`;
+                pageInfo.textContent = `Page ${currentSlide + 1} of ${filteredSlides.length}`;
+                console.log('Updated page info:', pageInfo.textContent);
             }
             
             // Update button states
             if (prevBtn) {
-                prevBtn.disabled = isTransitioning;
+                prevBtn.disabled = isTransitioning || filteredSlides.length <= 1;
             }
             if (nextBtn) {
-                nextBtn.disabled = isTransitioning;
+                nextBtn.disabled = isTransitioning || filteredSlides.length <= 1;
             }
         }
         
-        // Auto-play functionality - DISABLED
-        function startAutoPlay() {
-            // Auto-play is disabled - carousel only responds to manual navigation
-            console.log('Auto-play is disabled');
-        }
-        
-        function resetAutoPlay() {
-            // Auto-play is disabled
-        }
-        
-        function stopAutoPlay() {
-            // Auto-play is disabled
+        // Update filter display
+        function updateFilterDisplay() {
+            filterTabs.forEach(tab => {
+                const filter = tab.getAttribute('data-filter');
+                if (filter === currentFilter) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
         }
         
         // Show page options dropdown
@@ -156,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             
             // Create page options
-            for (let i = 1; i <= totalSlides; i++) {
+            for (let i = 1; i <= filteredSlides.length; i++) {
                 const pageOption = document.createElement('button');
                 pageOption.className = 'page-option';
                 pageOption.textContent = `Page ${i}`;
@@ -241,7 +281,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Page info clicked, showing dropdown...');
-                // Show a modal or dropdown with page options
                 showPageOptions();
             });
         }
@@ -249,19 +288,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Filter tab functionality
         filterTabs.forEach(tab => {
             tab.addEventListener('click', function() {
-                // Remove active class from all tabs
-                filterTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // Here you would typically filter the carousel content based on the selected category
                 const filter = this.getAttribute('data-filter');
-                console.log('Filter selected:', filter);
-                // For now, just log the filter selection
+                console.log('Filter tab clicked:', filter);
+                filterSlides(filter);
             });
         });
-        
-        // Auto-play is disabled - no hover events needed
         
         // Keyboard navigation for carousel
         featuredCarousel.addEventListener('keydown', (e) => {
@@ -300,38 +331,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // Initialize the carousel with a small delay to ensure DOM is ready
-        setTimeout(() => {
-            initCarousel();
-            
-            // Test the carousel functionality
-            console.log('Carousel initialized. Testing navigation...');
-            console.log('Total slides:', totalSlides);
-            console.log('Current slide:', currentSlide);
-            
-            // Add a test button for debugging (remove in production)
-            const testButton = document.createElement('button');
-            testButton.textContent = 'Test Page 2';
-            testButton.style.cssText = `
-                position: fixed;
-                top: 10px;
-                right: 10px;
-                z-index: 9999;
-                background: red;
-                color: white;
-                border: none;
-                padding: 10px;
-                cursor: pointer;
-            `;
-            testButton.addEventListener('click', () => {
-                console.log('Test button clicked - going to page 2');
-                goToSlide(1);
-            });
-            document.body.appendChild(testButton);
-        }, 100);
+        // Initialize the carousel
+        initCarousel();
     }
 
-    // Filter tabs functionality
+    // Filter tabs functionality for main resources
     const filterTabs = document.querySelectorAll('.filter-tab');
     
     filterTabs.forEach(tab => {
