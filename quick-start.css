@@ -26,22 +26,6 @@ body {
     --soft-white: #FFF6EB;
 }
 
-/* Navigation styles are now handled by styles.css */
-    left: 0;
-    background-color: var(--dark-gray);
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 8px 0;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 1001;
-}
-
-/* Dropdown styles are now handled by styles.css */
-
 .cta-button {
     background-color: var(--primary-green);
     color: var(--dark-gray);

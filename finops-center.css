@@ -31,15 +31,6 @@ body {
     padding: 0 100px; */
 }
 
-/* Navigation styles are now handled by styles.css */
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-/* Dropdown styles are now handled by styles.css */
-
 .cta-button {
     background-color: var(--primary-green);
     color: #222222;
