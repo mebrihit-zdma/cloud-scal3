@@ -512,7 +512,7 @@ body {
 
 .resources-content {
     display: flex;
-    gap: 260px;
+    gap: 100px;
 }
 
 .featured-article {
@@ -602,8 +602,8 @@ body {
 }
 
 .article-item .article-image {
-    width: 120px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
     border-radius: 30px;
     margin-bottom: 0;
     flex-shrink: 0;
@@ -863,7 +863,7 @@ body {
     }
     
     .resources-content {
-        gap: 180px;
+        gap: 80px;
     }
     
     .featured-article {
@@ -1117,7 +1117,7 @@ body {
     
     .resources-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
     
     .featured-article {
@@ -1465,7 +1465,7 @@ body {
     }
     
     .resources-content {
-        gap: 30px;
+        gap: 20px;
     }
     
     .featured-article {
