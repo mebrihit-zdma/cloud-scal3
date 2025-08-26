@@ -435,7 +435,6 @@ body {
     display: flex;
     gap: 16px;
     margin-bottom: 40px;
-    border-bottom: 2px solid #e0e0e0;
 }
 
 .tab {
