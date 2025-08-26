@@ -148,20 +148,81 @@
             <p class="section-description-agent-bill">
                 Agent Bill is built to automate the most time-consuming, manual tasks of AWS Cloud Financial Management. Whether it's handling approvals, surfacing cost-saving recommendations, or executing buying decisions—Agent Bill works quietly in the background to support your team's FinOps workflows.
             </p>
-            <div class="superpowers-tabs">
-                <div class="tab active">
-                    <span>AWS Marketplace Advisory</span>
-                    <div class="active-indicator"></div>
+            
+            <!-- Tabbed Interface -->
+            <div class="tabbed-interface">
+                <div class="tab-navigation">
+                    <button class="tab-button active" data-tab="marketplace">
+                        <span>AWS Marketplace Advisory</span>
+                        <div class="active-indicator"></div>
+                    </button>
+                    <button class="tab-button" data-tab="native">
+                        <span>Native AWS Agentic Products</span>
+                    </button>
+                    <button class="tab-button" data-tab="quickstart">
+                        <span>Product QuickStart Adoption</span>
+                    </button>
                 </div>
-                <div class="tab">
-                    <span>Native AWS Agentic Products</span>
+                
+                <div class="tab-content">
+                    <!-- Tab 1: AWS Marketplace Advisory -->
+                    <div class="tab-panel active" id="marketplace-panel">
+                        <div class="tab-panel-content">
+                            <img src="./assets/images/cs3-dashboard.svg" alt="AWS Marketplace Advisory Dashboard">
+                            <!-- <div class="tab-text">
+                                <h3>AWS Marketplace Advisory</h3>
+                                <p>Agent Bill provides intelligent recommendations for AWS Marketplace purchases, helping you optimize costs and make informed buying decisions. Our AI analyzes your usage patterns and suggests the most cost-effective solutions.</p>
+                                <ul class="feature-list">
+                                    <li>Automated cost analysis and recommendations</li>
+                                    <li>Intelligent pricing optimization</li>
+                                    <li>Real-time marketplace insights</li>
+                                    <li>Seamless integration with existing workflows</li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <img src="./assets/images/cs3-dashboard.svg" alt="AWS Marketplace Advisory Dashboard">
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2: Native AWS Agentic Products -->
+                    <div class="tab-panel" id="native-panel">
+                        <div class="tab-panel-content">
+                            <div class="tab-text">
+                                <h3>Native AWS Agentic Products</h3>
+                                <p>Leverage the power of AWS-native AI agents to automate complex cloud management tasks. Agent Bill integrates seamlessly with AWS services to provide intelligent automation and decision-making capabilities.</p>
+                                <ul class="feature-list">
+                                    <li>Native AWS service integration</li>
+                                    <li>Intelligent resource management</li>
+                                    <li>Automated cost optimization</li>
+                                    <li>Real-time monitoring and alerts</li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <img src="./assets/images/marketing.svg" alt="Native AWS Agentic Products">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 3: Product QuickStart Adoption -->
+                    <div class="tab-panel" id="quickstart-panel">
+                        <div class="tab-panel-content">
+                            <div class="tab-text">
+                                <h3>Product QuickStart Adoption</h3>
+                                <p>Accelerate your cloud adoption with our QuickStart solutions. Agent Bill provides guided implementation paths and best practices to help you get up and running quickly with AWS services.</p>
+                                <ul class="feature-list">
+                                    <li>Guided implementation workflows</li>
+                                    <li>Best practice templates</li>
+                                    <li>Rapid deployment options</li>
+                                    <li>Comprehensive documentation</li>
+                                </ul>
+                            </div>
+                            <div class="tab-image">
+                                <img src="./assets/images/labtop.svg" alt="Product QuickStart Adoption">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab">
-                    <span>Product QuickStart Adoption</span>
-                </div>
-            </div>
-            <div class="dashboard-preview">
-                <img src="./assets/images/cs3-dashboard.svg" alt="CS3 Dashboard">
             </div>
         </div>
     </section>
