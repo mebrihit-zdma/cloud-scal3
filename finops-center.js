@@ -87,28 +87,87 @@ function initPersonasTabs() {
 // Navigation Dots Functionality
 function initNavigationDots() {
     const dots = document.querySelectorAll('.dot');
-    const simplifyCards = document.querySelectorAll('.simplify-card');
+    const gridContainer = document.querySelector('.simplifies-grid-container');
+    const cards = document.querySelectorAll('.simplify-card');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
     
-    dots.forEach((dot, index) => {
+    // Calculate card width including gap
+    const cardWidth = 503; // Width from CSS
+    const gap = 10; // Gap from CSS
+    const cardTotalWidth = cardWidth + gap;
+    
+    // Calculate how many cards can be shown at once (4 cards)
+    const cardsPerView = 4;
+    
+    // Calculate total number of slides needed (sliding one card at a time)
+    const totalSlides = cards.length - cardsPerView + 1;
+    
+    // Current slide position
+    let currentSlide = 0;
+    
+    // Update dots to match the number of slides
+    updateNavigationDots(totalSlides);
+    
+    // Re-select dots after updating
+    const updatedDots = document.querySelectorAll('.dot');
+    
+    // Function to update carousel position
+    function updateCarousel(slideIndex) {
+        currentSlide = slideIndex;
+        const translateX = -(slideIndex * cardTotalWidth);
+        gridContainer.style.transform = `translateX(${translateX}px)`;
+        
+        // Update dots
+        updatedDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === slideIndex);
+        });
+        
+        // Update arrow states
+        if (prevButton) prevButton.disabled = slideIndex === 0;
+        if (nextButton) nextButton.disabled = slideIndex === totalSlides - 1;
+    }
+    
+    // Dot click handlers
+    updatedDots.forEach((dot, index) => {
         dot.addEventListener('click', function() {
-            // Remove active class from all dots
-            dots.forEach(d => d.classList.remove('active'));
-            
-            // Add active class to clicked dot
-            this.classList.add('active');
-            
-            // Show/hide cards based on dot index
-            simplifyCards.forEach((card, cardIndex) => {
-                if (index === 0) {
-                    // Show first 4 cards
-                    card.style.display = cardIndex < 4 ? 'block' : 'none';
-                } else {
-                    // Show next set of cards (if any)
-                    card.style.display = cardIndex >= 4 ? 'block' : 'none';
-                }
-            });
+            updateCarousel(index);
         });
     });
+    
+    // Arrow click handlers
+    if (prevButton) {
+        prevButton.addEventListener('click', function() {
+            if (currentSlide > 0) {
+                updateCarousel(currentSlide - 1);
+            }
+        });
+    }
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            if (currentSlide < totalSlides - 1) {
+                updateCarousel(currentSlide + 1);
+            }
+        });
+    }
+    
+    // Initialize arrow states
+    if (prevButton) prevButton.disabled = true;
+    if (nextButton) nextButton.disabled = totalSlides <= 1;
+}
+
+// Function to update navigation dots based on total slides
+function updateNavigationDots(totalSlides) {
+    const dotsContainer = document.querySelector('.navigation-dots');
+    dotsContainer.innerHTML = '';
+    
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        if (i === 0) dot.classList.add('active');
+        dotsContainer.appendChild(dot);
+    }
 }
 
 // Dropdown Menu Functionality
