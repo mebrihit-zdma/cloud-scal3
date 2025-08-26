@@ -21,35 +21,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Dropdown menu functionality
+    // Dropdown menu functionality - click-based for all pages
     const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
-    
-    dropdownItems.forEach(dropdown => {
-        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-        const dropdownIcon = dropdown.querySelector('.dropdown-icon');
-        
-        // Toggle dropdown on click (but not on dropdown items)
-        dropdown.addEventListener('click', (e) => {
-            // Don't toggle if clicking on a dropdown item
-            if (e.target.classList.contains('dropdown-item')) {
-                return;
-            }
+        dropdownItems.forEach(dropdown => {
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            const dropdownIcon = dropdown.querySelector('.dropdown-icon');
             
-            e.preventDefault();
-            dropdown.classList.toggle('active');
-            
-            if (dropdown.classList.contains('active')) {
-                dropdownIcon.style.transform = 'rotate(180deg)';
-                dropdownMenu.style.opacity = '1';
-                dropdownMenu.style.visibility = 'visible';
-                dropdownMenu.style.transform = 'translateY(0)';
-            } else {
-                dropdownIcon.style.transform = 'rotate(0deg)';
-                dropdownMenu.style.opacity = '0';
-                dropdownMenu.style.visibility = 'hidden';
-                dropdownMenu.style.transform = 'translateY(-10px)';
-            }
-        });
+            // Toggle dropdown on click (but not on dropdown items)
+            dropdown.addEventListener('click', (e) => {
+                // Don't toggle if clicking on a dropdown item
+                if (e.target.classList.contains('dropdown-item')) {
+                    return;
+                }
+                
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                
+                if (dropdown.classList.contains('active')) {
+                    dropdownIcon.style.transform = 'rotate(180deg)';
+                    dropdownMenu.style.opacity = '1';
+                    dropdownMenu.style.visibility = 'visible';
+                    dropdownMenu.style.transform = 'translateY(0)';
+                } else {
+                    dropdownIcon.style.transform = 'rotate(0deg)';
+                    dropdownMenu.style.opacity = '0';
+                    dropdownMenu.style.visibility = 'hidden';
+                    dropdownMenu.style.transform = 'translateY(-10px)';
+                }
+            });
         
         // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
@@ -99,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 dropdownMenu.style.visibility = 'hidden';
                 dropdownMenu.style.transform = 'translateY(-10px)';
             });
-        });
-    });
+                 });
+     });
 
     // Learn More button functionality - ALLOW NORMAL NAVIGATION
     const learnMoreButtons = document.querySelectorAll('.learn-more-btn');

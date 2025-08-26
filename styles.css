@@ -116,9 +116,10 @@ body {
     position: relative;
 }
 
-.nav-item.dropdown:hover .dropdown-icon {
+/* Remove hover behavior for dropdown icons - now controlled by JavaScript */
+/* .nav-item.dropdown:hover .dropdown-icon {
     transform: rotate(180deg);
-}
+} */
 
 .dropdown-menu {
     position: absolute;
@@ -173,16 +174,17 @@ body {
     border-radius: 0 0 8px 8px;
 }
 
-/* Active dropdown state */
+/* Active dropdown state - only rotate icon, keep menu hidden by default */
 .nav-item.dropdown.active .dropdown-icon {
     transform: rotate(180deg);
 }
 
-.nav-item.dropdown.active .dropdown-menu {
+/* Remove the rule that makes active dropdowns visible by default */
+/* .nav-item.dropdown.active .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-}
+} */
 
 /* Mobile responsive dropdown */
 @media (max-width: 768px) {

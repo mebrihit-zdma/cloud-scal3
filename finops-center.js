@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all interactive elements
     initPersonasTabs();
     initNavigationDots();
-    initDropdownMenu();
+    // initDropdownMenu(); // Removed - using click-based dropdowns from script.js
     initSmoothScrolling();
     initButtonHoverEffects();
 });
@@ -170,28 +170,28 @@ function updateNavigationDots(totalSlides) {
     }
 }
 
-// Dropdown Menu Functionality
-function initDropdownMenu() {
-    const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
-    
-    dropdownItems.forEach(item => {
-        const dropdownMenu = item.querySelector('.dropdown-menu');
-        
-        // Show dropdown on hover
-        item.addEventListener('mouseenter', function() {
-            dropdownMenu.style.opacity = '1';
-            dropdownMenu.style.visibility = 'visible';
-            dropdownMenu.style.transform = 'translateY(0)';
-        });
-        
-        // Hide dropdown when mouse leaves
-        item.addEventListener('mouseleave', function() {
-            dropdownMenu.style.opacity = '0';
-            dropdownMenu.style.visibility = 'hidden';
-            dropdownMenu.style.transform = 'translateY(-10px)';
-        });
-    });
-}
+// Dropdown Menu Functionality - Removed hover-based logic to use click-based from script.js
+// function initDropdownMenu() {
+//     const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
+//     
+//     dropdownItems.forEach(item => {
+//         const dropdownMenu = item.querySelector('.dropdown-menu');
+//         
+//         // Show dropdown on hover
+//         item.addEventListener('mouseenter', function() {
+//             dropdownMenu.style.opacity = '1';
+//             dropdownMenu.style.visibility = 'visible';
+//             dropdownMenu.style.transform = 'translateY(0)';
+//         });
+//         
+//         // Hide dropdown when mouse leaves
+//         item.addEventListener('mouseleave', function() {
+//             dropdownMenu.style.opacity = '0';
+//             dropdownMenu.style.visibility = 'hidden';
+//             dropdownMenu.style.transform = 'translateY(-10px)';
+//         });
+//     });
+// }
 
 // Smooth Scrolling for Anchor Links
 function initSmoothScrolling() {

@@ -93,23 +93,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navigation dropdown functionality
-    const dropdowns = document.querySelectorAll('.dropdown');
-    dropdowns.forEach(dropdown => {
-        const menu = dropdown.querySelector('.dropdown-menu');
-        
-        dropdown.addEventListener('mouseenter', function() {
-            menu.style.opacity = '1';
-            menu.style.visibility = 'visible';
-            menu.style.transform = 'translateY(0)';
-        });
-        
-        dropdown.addEventListener('mouseleave', function() {
-            menu.style.opacity = '0';
-            menu.style.visibility = 'hidden';
-            menu.style.transform = 'translateY(-10px)';
-        });
-    });
+    // Navigation dropdown functionality - Removed hover-based logic to use click-based from script.js
+    // const dropdowns = document.querySelectorAll('.dropdown');
+    // dropdowns.forEach(dropdown => {
+    //     const menu = dropdown.querySelector('.dropdown-menu');
+    //     
+    //     dropdown.addEventListener('mouseenter', function() {
+    //         menu.style.opacity = '1';
+    //         menu.style.visibility = 'visible';
+    //         menu.style.transform = 'translateY(0)';
+    //     });
+    //     
+    //     dropdown.addEventListener('mouseleave', function() {
+    //         menu.style.opacity = '0';
+    //         menu.style.visibility = 'hidden';
+    //         menu.style.transform = 'translateY(-10px)';
+    //     });
+    // });
 
     // Intersection Observer for animations
     const observerOptions = {
