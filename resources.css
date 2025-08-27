@@ -94,9 +94,9 @@
 
 /* Main Content */
 .resources-main {
-    max-width: 1716px;
-    margin: 0 auto;
-    padding: 0 100px;
+    /* max-width: 1716px; */
+    margin: 0 100px;
+    /* padding: 0 100px; */
 }
 
 /* Page Title */
