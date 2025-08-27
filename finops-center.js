@@ -84,9 +84,8 @@ function initPersonasTabs() {
     });
 }
 
-// Navigation Dots Functionality
+// Carousel Navigation Functionality (Button Only)
 function initNavigationDots() {
-    const dots = document.querySelectorAll('.dot');
     const gridContainer = document.querySelector('.simplifies-grid-container');
     const cards = document.querySelectorAll('.simplify-card');
     const prevButton = document.querySelector('.carousel-prev');
@@ -106,34 +105,16 @@ function initNavigationDots() {
     // Current slide position
     let currentSlide = 0;
     
-    // Update dots to match the number of slides
-    updateNavigationDots(totalSlides);
-    
-    // Re-select dots after updating
-    const updatedDots = document.querySelectorAll('.dot');
-    
     // Function to update carousel position
     function updateCarousel(slideIndex) {
         currentSlide = slideIndex;
         const translateX = -(slideIndex * cardTotalWidth);
         gridContainer.style.transform = `translateX(${translateX}px)`;
         
-        // Update dots
-        updatedDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === slideIndex);
-        });
-        
         // Update arrow states
         if (prevButton) prevButton.disabled = slideIndex === 0;
         if (nextButton) nextButton.disabled = slideIndex === totalSlides - 1;
     }
-    
-    // Dot click handlers
-    updatedDots.forEach((dot, index) => {
-        dot.addEventListener('click', function() {
-            updateCarousel(index);
-        });
-    });
     
     // Arrow click handlers
     if (prevButton) {
@@ -155,19 +136,6 @@ function initNavigationDots() {
     // Initialize arrow states
     if (prevButton) prevButton.disabled = true;
     if (nextButton) nextButton.disabled = totalSlides <= 1;
-}
-
-// Function to update navigation dots based on total slides
-function updateNavigationDots(totalSlides) {
-    const dotsContainer = document.querySelector('.navigation-dots');
-    dotsContainer.innerHTML = '';
-    
-    for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'dot';
-        if (i === 0) dot.classList.add('active');
-        dotsContainer.appendChild(dot);
-    }
 }
 
 // Dropdown Menu Functionality - Removed hover-based logic to use click-based from script.js
