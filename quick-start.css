@@ -50,9 +50,9 @@ body {
 
 /* Container */
 .container {
-    max-width: 1716px;
+    /* max-width: 1716px;
     margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 100px; */
 }
 
 @media (max-width: 1200px) {
@@ -133,7 +133,7 @@ body {
     background-color: var(--dark-gray);
 }
 
-.mission-content {
+.mission-content-quickstart {
     display: flex;
     align-items: flex-start;
     gap: 96px;
@@ -402,7 +402,7 @@ body {
         flex-direction: column;
     }
     
-    .mission-content {
+    .mission-content-quickstart {
         gap: 60px;
     }
     
@@ -488,7 +488,7 @@ body {
         padding: 60px 20px;
     }
     
-    .mission-content {
+    .mission-content-quickstart {
         flex-direction: column;
         gap: 40px;
     }
