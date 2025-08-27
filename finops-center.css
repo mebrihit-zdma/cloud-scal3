@@ -281,6 +281,7 @@ body {
 .section-header {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 20px;
     margin-bottom: 30px;
     padding-left: 100px;
@@ -320,7 +321,9 @@ body {
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
-    background-color: #666666;
+    background-color: #333;
+    border: none;
+    outline: none;
 }
 
 .carousel-prev {
@@ -1034,6 +1037,21 @@ body {
     .footer-social {
         justify-content: center;
     }
+    
+    /* Carousel responsive adjustments */
+    .carousel-arrow {
+        width: 50px;
+        height: 50px;
+        bottom: -80px;
+    }
+    
+    .carousel-prev {
+        right: 80px;
+    }
+    
+    .carousel-next {
+        right: 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1100,6 +1118,20 @@ body {
         padding: 14px 20px;
     }
     
+    .breadcrumb-text {
+        font-size: 18px;
+    }
+    
+    .icon-container {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .icon-container img {
+        width: 20px;
+        height: 20px;
+    }
+    
     .why-section {
         padding: 60px 20px;
     }
@@ -1146,12 +1178,15 @@ body {
     
     .simplifies-grid {
         padding-left: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 80px;
+        width: calc(100% - 40px);
     }
     
     .simplify-card {
         height: 350px;
         border-radius: 30px;
+        width: 100%;
+        max-width: 400px;
     }
     
     .card-image {
@@ -1165,6 +1200,21 @@ body {
         bottom: 15px;
         left: 20px;
         right: 20px;
+    }
+    
+    /* Carousel responsive adjustments for mobile */
+    .carousel-arrow {
+        width: 45px;
+        height: 45px;
+        bottom: -70px;
+    }
+    
+    .carousel-prev {
+        right: 70px;
+    }
+    
+    .carousel-next {
+        right: 15px;
     }
     
 
@@ -1375,12 +1425,22 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+        min-height: 400px;
+        margin-top: 60px;
+    }
+    
     .hero-title {
         font-size: 28px;
     }
     
     .hero-description {
         font-size: 16px;
+    }
+    
+    .why-section {
+        padding: 40px 15px;
     }
     
     .why-left h2 {
@@ -1391,6 +1451,12 @@ body {
         font-size: 16px;
     }
     
+    .features-section {
+        padding: 20px 15px;
+        border-radius: 20px;
+        margin: 0 5px;
+    }
+    
     .features-header h2 {
         font-size: 28px;
     }
@@ -1399,20 +1465,63 @@ body {
         font-size: 24px;
     }
     
+    .cta-section {
+        padding: 40px 15px;
+        border-radius: 20px;
+        margin: 0 5px 20px 5px;
+    }
+    
     .cta-text h2 {
         font-size: 28px;
     }
     
+    .simplifies-section {
+        padding: 40px 0;
+    }
+    
+    .section-header {
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .simplifies-grid {
+        padding-left: 15px;
+        margin-bottom: 60px;
+        width: calc(100% - 30px);
+    }
+    
     .simplify-card {
         height: 300px;
+        border-radius: 20px;
+        max-width: 350px;
     }
     
     .card-image {
         height: 180px;
+        border-radius: 15px;
+        margin: 8px;
     }
     
     .simplify-card h4 {
         font-size: 18px;
+        bottom: 10px;
+        left: 15px;
+        right: 15px;
+    }
+    
+    /* Carousel responsive adjustments for small mobile */
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        bottom: -60px;
+    }
+    
+    .carousel-prev {
+        right: 60px;
+    }
+    
+    .carousel-next {
+        right: 10px;
     }
     
     .main-video {
@@ -1423,8 +1532,14 @@ body {
         height: 150px;
     }
     
+    .pricing-section {
+        padding: 0 15px;
+        margin: 20px 0;
+    }
+    
     .pricing-card {
         padding: 20px 15px;
+        border-radius: 15px;
     }
     
     .amount {
@@ -1433,5 +1548,14 @@ body {
     
     .period {
         font-size: 20px;
+    }
+    
+    .better-together {
+        padding: 60px 15px;
+    }
+    
+    .footer {
+        padding: 30px 15px;
+        margin-top: 20px;
     }
 }
