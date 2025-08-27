@@ -319,14 +319,6 @@
     object-fit: cover;
 }
 
-/* CTA Section */
-.cta-section {
-    padding: 128px 138px;
-    background-color: var(--primary-green);
-    border-radius: 50px;
-    margin: 80px 100px;
-}
-
 .cta-content {
     max-width: 1716px;
     margin: 0 auto;
@@ -493,11 +485,6 @@
         flex-direction: column;
         gap: 20px;
         text-align: center;
-    }
-    
-    .cta-section {
-        margin: 40px 20px;
-        padding: 60px 40px;
     }
     
     .cta-text h2 {

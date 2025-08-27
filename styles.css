@@ -1005,7 +1005,7 @@ body {
     color: var(--gray-0);
     padding: 128px 80px;
     border-radius: 50px;
-    /* margin: 40px 100px; */
+    margin: 40px 100px;
     background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
 }
 

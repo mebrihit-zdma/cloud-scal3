@@ -463,14 +463,6 @@ body {
     gap: 20px;
 }
 
-/* CTA Section */
-.cta-section {
-    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
-    padding: 128px 138px;
-    border-radius: 50px;
-    margin: 0 100px;
-}
-
 .cta-content {
     display: flex;
     align-items: center;
@@ -564,11 +556,6 @@ body {
     .activities-section {
         margin: 0 10px;
         padding: 80px 50px;
-    }
-    
-    .cta-section {
-        margin: 0 50px;
-        padding: 100px 80px;
     }
     
     .hero {
@@ -750,12 +737,6 @@ body {
     
     .resource-content h4 {
         font-size: 28px;
-    }
-    
-    .cta-section {
-        padding: 80px 20px;
-        margin: 0 20px;
-        border-radius: 30px;
     }
     
     .cta-text h2 {
