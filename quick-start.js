@@ -39,19 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Resource item hover effects
-    const resourceItems = document.querySelectorAll('.resource-item');
-    resourceItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateX(10px)';
-            this.style.transition = 'transform 0.3s ease';
-        });
-
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateX(0)';
-        });
-    });
-
     // Social icon hover effects
     const socialIcons = document.querySelectorAll('.social-icon');
     socialIcons.forEach(icon => {
@@ -74,15 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
         });
     });
-
-    // Explore button functionality
-    const exploreBtn = document.querySelector('.explore-btn');
-    if (exploreBtn) {
-        exploreBtn.addEventListener('click', function() {
-            // Navigate to resources page or open resources section
-            window.location.href = 'resources.html';
-        });
-    }
 
     // Add loading animation for activity cards
     function animateActivityCards() {

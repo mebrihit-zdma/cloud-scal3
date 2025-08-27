@@ -880,7 +880,7 @@ body {
 
 .resources-grid {
     display: flex;
-    gap: 100px;
+    gap: 260px;
 }
 
 .featured-resource {

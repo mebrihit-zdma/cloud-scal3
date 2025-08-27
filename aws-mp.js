@@ -120,24 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Resources title hover effect
-    const resourcesTitle = document.querySelector('.resources-title');
-    if (resourcesTitle) {
-        resourcesTitle.addEventListener('mouseenter', function() {
-            const arrow = this.querySelector('.arrow-icon');
-            if (arrow) {
-                arrow.style.transform = 'translateX(5px)';
-            }
-        });
-        
-        resourcesTitle.addEventListener('mouseleave', function() {
-            const arrow = this.querySelector('.arrow-icon');
-            if (arrow) {
-                arrow.style.transform = 'translateX(0)';
-            }
-        });
-    }
-
     // Dropdown menu functionality
     const dropdownMenus = document.querySelectorAll('.menu-item');
     dropdownMenus.forEach(menu => {

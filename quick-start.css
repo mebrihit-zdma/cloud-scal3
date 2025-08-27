@@ -301,37 +301,6 @@ body {
     flex: 1;
 }
 
-/* Resources Section */
-.resources-section {
-    padding: 80px 100px;
-    background-color: var(--dark-gray);
-}
-
-.resources-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.resources-tag {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.resources-tag span {
-    font-size: 28px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.333px;
-}
-
-.resources-tag img {
-    width: 16.971px;
-    height: 16.971px;
-}
-
 .explore-btn {
     background-color: var(--primary-green);
     color: var(--dark-gray);
@@ -350,117 +319,6 @@ body {
 .explore-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(151, 244, 186, 0.3);
-}
-
-.resources-grid {
-    display: flex;
-    gap: 100px;
-}
-
-.featured-resource {
-    flex: 1;
-    max-width: 700px;
-    background: rgba(85, 85, 85, 0.6);
-    border: 1.333px solid rgba(85, 85, 85, 0.6);
-    border-radius: 50px;
-    padding: 20px;
-}
-
-.resource-image {
-    width: 100%;
-    height: 406.857px;
-    border-radius: 40px;
-    overflow: hidden;
-    margin-bottom: 22px;
-}
-
-.resource-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.featured-resource h3 {
-    font-size: 42.667px;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 22px;
-    line-height: 1.3;
-    letter-spacing: -0.5926px;
-}
-
-.featured-resource p {
-    font-size: 21.333px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 22px;
-    line-height: 1.6;
-}
-
-.resource-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.resource-tag {
-    background-color: rgba(237, 221, 182, 0.48);
-    color: var(--secondary-cream);
-    padding: 8px 16px;
-    border-radius: 21.333px;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.1429px;
-}
-
-.resource-date {
-    font-size: 18.667px;
-    color: #82808A;
-}
-
-.resources-list {
-    flex: 1;
-    max-width: 716px;
-    display: flex;
-    flex-direction: column;
-    gap: 52px;
-}
-
-.resource-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-bottom: 52px;
-    border-bottom: 1px solid rgba(85, 85, 85, 0.6);
-}
-
-.resource-item:last-child {
-    border-bottom: none;
-}
-
-.resource-content {
-    flex: 1;
-}
-
-.resource-content h4 {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 20px;
-    line-height: 1.4;
-    letter-spacing: -0.4444px;
-}
-
-.resource-item .resource-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 30px;
-    margin-bottom: 0;
-}
-
-.resource-item .resource-meta {
-    justify-content: flex-start;
-    gap: 20px;
 }
 
 .cta-content {
@@ -533,11 +391,6 @@ body {
         gap: 20px;
     }
     
-    .resources-grid {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
     .cta-content {
         flex-direction: column;
         gap: 40px;
@@ -566,9 +419,6 @@ body {
         padding: 80px 50px;
     }
     
-    .resources-section {
-        padding: 80px 50px;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -688,57 +538,11 @@ body {
         font-size: 20px;
     }
     
-    .resources-section {
-        padding: 60px 20px;
-    }
-    
-    .resources-header {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    
-    .resources-tag span {
-        font-size: 24px;
-    }
-    
     .explore-btn {
         font-size: 18px;
         padding: 14px 28px;
     }
-    
-    .resources-grid {
-        gap: 40px;
-    }
-    
-    .resource-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .resource-item .resource-image {
-        width: 100%;
-        height: 200px;
-    }
-    
-    .featured-resource {
-        padding: 16px;
-        border-radius: 30px;
-    }
-    
-    .featured-resource h3 {
-        font-size: 32px;
-    }
-    
-    .featured-resource p {
-        font-size: 18px;
-    }
-    
-    .resource-content h4 {
-        font-size: 28px;
-    }
-    
+      
     .cta-text h2 {
         font-size: 40px;
     }
@@ -836,25 +640,9 @@ body {
         font-size: 18px;
     }
     
-    .resources-tag span {
-        font-size: 20px;
-    }
-    
     .explore-btn {
         font-size: 16px;
         padding: 12px 24px;
-    }
-    
-    .featured-resource h3 {
-        font-size: 28px;
-    }
-    
-    .featured-resource p {
-        font-size: 16px;
-    }
-    
-    .resource-content h4 {
-        font-size: 24px;
     }
     
     .cta-text h2 {
