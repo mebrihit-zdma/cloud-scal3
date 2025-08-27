@@ -781,137 +781,9 @@ body {
     letter-spacing: 0.2526px;
 }
 
-/* CTA Section */
-.cta-section {
-    padding: 128px 138px;
-    border-radius: 50px;
-    margin: 0 20px 80px 20px;
-    background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
-}
 
-.cta-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 176px;
-}
 
-.cta-text h2 {
-    font-family: 'Onest', sans-serif;
-    font-weight: 400;
-    font-size: 62.111px;
-    color: #222222;
-    line-height: 1.19;
-    letter-spacing: -0.8627px;
-    margin-bottom: 20px;
-}
 
-.cta-text p {
-    font-family: 'Onest', sans-serif;
-    font-weight: 400;
-    font-size: 21.5px;
-    color: #222222;
-    line-height: 1.55;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.cta-buttons .btn {
-    height: 66.667px;
-    width: 248.444px;
-}
-
-/* Footer */
-.footer {
-    background-color: #222222;
-    padding: 69px 100px;
-    margin-top: 80px;
-}
-
-.footer-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: 1719px;
-    margin: 0 auto;
-}
-
-.footer-left {
-    max-width: 344px;
-}
-
-.footer-logo {
-    margin-bottom: 20px;
-}
-
-.footer-logo img {
-    height: 39px;
-    width: 110px;
-}
-
-.footer-left p {
-    font-family: 'Onest', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.5;
-}
-
-.footer-menu {
-    display: flex;
-    gap: 167px;
-}
-
-.menu-column h4 {
-    font-family: 'Onest', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.menu-column a {
-    display: block;
-    font-family: 'Onest', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-
-.menu-column a:hover {
-    color: var(--primary-green);
-}
-
-.footer-social {
-    display: flex;
-    gap: 74px;
-}
-
-.social-icon {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-green);
-    border-radius: 21.25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-2px);
-}
-
-.social-icon img {
-    width: 32px;
-    height: 32px;
-}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -945,13 +817,9 @@ body {
         padding: 177px 100px;
     }
     
-    .cta-section {
-        padding: 128px 50px;
-    }
+
     
-    .footer {
-        padding: 69px 50px;
-    }
+
     
     .hero-title {
         font-size: 48px;
@@ -1014,29 +882,9 @@ body {
         width: 100%;
     }
     
-    .cta-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
+
     
-    .cta-text h2 {
-        font-size: 48px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .footer-menu {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .footer-social {
-        justify-content: center;
-    }
+
     
     /* Carousel responsive adjustments */
     .carousel-arrow {
@@ -1357,71 +1205,9 @@ body {
         font-size: 16px;
     }
     
-    .cta-section {
-        padding: 60px 20px;
-        border-radius: 30px;
-        margin: 0 10px 40px 10px;
-    }
+
     
-    .cta-text h2 {
-        font-size: 36px;
-        line-height: 1.3;
-    }
-    
-    .cta-text p {
-        font-size: 18px;
-    }
-    
-    .cta-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .cta-buttons .btn {
-        height: 50px;
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .footer {
-        padding: 40px 20px;
-        margin-top: 40px;
-    }
-    
-    .footer-content {
-        gap: 30px;
-    }
-    
-    .footer-left p {
-        font-size: 18px;
-    }
-    
-    .footer-menu {
-        gap: 30px;
-    }
-    
-    .menu-column h4 {
-        font-size: 20px;
-    }
-    
-    .menu-column a {
-        font-size: 16px;
-    }
-    
-    .footer-social {
-        gap: 30px;
-    }
-    
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 15px;
-    }
-    
-    .social-icon img {
-        width: 24px;
-        height: 24px;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -1465,15 +1251,7 @@ body {
         font-size: 24px;
     }
     
-    .cta-section {
-        padding: 40px 15px;
-        border-radius: 20px;
-        margin: 0 5px 20px 5px;
-    }
-    
-    .cta-text h2 {
-        font-size: 28px;
-    }
+
     
     .simplifies-section {
         padding: 40px 0;
@@ -1554,8 +1332,5 @@ body {
         padding: 60px 15px;
     }
     
-    .footer {
-        padding: 30px 15px;
-        margin-top: 20px;
-    }
+
 }

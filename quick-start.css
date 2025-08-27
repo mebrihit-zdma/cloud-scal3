@@ -532,91 +532,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Footer */
-.footer {
-    background-color: #222222;
-    padding: 69px 100px;
-    margin-top: 80px;
-}
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1719px;
-    margin: 0 auto;
-}
-
-.footer-left {
-    max-width: 344px;
-}
-
-.footer-logo {
-    margin-bottom: 20px;
-}
-
-.footer-logo img {
-    height: 39px;
-    width: 110px;
-}
-
-.footer-description {
-    font-size: 24px;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.5;
-}
-
-.footer-menu {
-    display: flex;
-    gap: 167px;
-}
-
-.footer-column h4 {
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--white);
-    margin-bottom: 20px;
-}
-
-.footer-column ul {
-    list-style: none;
-}
-
-.footer-column ul li {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.footer-social {
-    display: flex;
-    gap: 74px;
-}
-
-.social-icon {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-green);
-    border-radius: 21.25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-2px);
-}
-
-.social-icon img {
-    width: 32px;
-    height: 32px;
-}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -856,22 +772,7 @@ body {
         min-width: 200px;
     }
     
-    .footer {
-        padding: 40px 20px;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .footer-menu {
-        gap: 40px;
-    }
-    
-    .footer-social {
-        gap: 40px;
-    }
+
     
     .social-icon {
         width: 40px;
@@ -989,15 +890,5 @@ body {
         min-width: 180px;
     }
     
-    .footer-description {
-        font-size: 20px;
-    }
-    
-    .footer-column h4 {
-        font-size: 20px;
-    }
-    
-    .footer-column ul li {
-        font-size: 18px;
-    }
+
 }

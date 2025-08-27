@@ -1132,9 +1132,20 @@ body {
 
 .footer-column li {
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 30px;
     margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-column a:hover {
+    color: var(--primary-green);
 }
 
 .footer-social {
@@ -1226,6 +1237,9 @@ body {
     .footer-menu {
         justify-content: space-between;
         width: 100%;
+    }
+    .footer-left {
+        max-width: 100%;
     }
 }
 

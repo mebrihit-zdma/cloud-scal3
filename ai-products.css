@@ -636,97 +636,7 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-.footer {
-    background-color: #222222;
-    padding: 69px 0;
-}
 
-.footer-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 80px;
-}
-
-.footer-left {
-    flex: 1;
-    max-width: 454px;
-}
-
-.footer-logo {
-    margin-bottom: 30px;
-}
-
-.footer-logo img {
-    height: 39px;
-    width: 110px;
-}
-
-.footer-description {
-    font-size: 24px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.5;
-}
-
-.footer-menu {
-    display: flex;
-    gap: 167px;
-}
-
-.menu-column h4 {
-    font-size: 24px;
-    font-weight: 500;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.menu-column ul {
-    list-style: none;
-}
-
-.menu-column ul li {
-    margin-bottom: 10px;
-}
-
-.menu-column ul li a {
-    font-size: 20px;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.menu-column ul li a:hover {
-    color: #97f4ba;
-}
-
-.footer-social {
-    display: flex;
-    gap: 24px;
-}
-
-.social-icon {
-    width: 50px;
-    height: 50px;
-    background-color: #97f4ba;
-    border-radius: 21px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(151, 244, 186, 0.3);
-}
-
-.social-icon img {
-    width: 32px;
-    height: 32px;
-}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -833,9 +743,7 @@ body {
         gap: 120px;
     }
     
-    .footer-menu {
-        gap: 120px;
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -1157,41 +1065,7 @@ body {
         padding: 16px 32px;
     }
     
-    .footer {
-        padding: 40px 0;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .footer-left {
-        max-width: 100%;
-    }
-    
-    .footer-description {
-        font-size: 20px;
-    }
-    
-    .footer-menu {
-        flex-direction: column;
-        gap: 30px;
-        width: 100%;
-    }
-    
-    .menu-column h4 {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-    
-    .menu-column ul li a {
-        font-size: 18px;
-    }
-    
-    .footer-social {
-        gap: 20px;
-    }
+
     
     .social-icon {
         width: 45px;
@@ -1478,30 +1352,7 @@ body {
         padding: 12px 24px;
     }
     
-    .footer {
-        padding: 30px 0;
-    }
-    
-    .footer-content {
-        gap: 30px;
-    }
-    
-    .footer-description {
-        font-size: 18px;
-    }
-    
-    .footer-menu {
-        gap: 25px;
-    }
-    
-    .menu-column h4 {
-        font-size: 18px;
-        margin-bottom: 12px;
-    }
-    
-    .menu-column ul li a {
-        font-size: 16px;
-    }
+
     
     .social-icon {
         width: 40px;
