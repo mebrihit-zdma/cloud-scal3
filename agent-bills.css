@@ -681,8 +681,8 @@ body {
 }
 
 .faq-icon {
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }

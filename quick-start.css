@@ -75,7 +75,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('./assets/images/hero-quick-start-bg.png');
+    background-image:  url('./assets/images/hero-quick-start-bg.png');
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%), url('./assets/images/hero-quick-start-bg.png'); */
     background-size: cover;
     background-position: center;
     padding: 121px 100px;
@@ -291,7 +292,11 @@ body {
 .activity-icon {
     width: 22.229px;
     height: 22.229px;
-    transform: rotate(-90deg);
+    
+}
+.activity-icon-45 {
+    transform: rotate(135deg);
+    
 }
 
 .activity-description {
