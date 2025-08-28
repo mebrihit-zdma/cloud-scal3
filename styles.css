@@ -243,8 +243,34 @@ body {
     justify-content: center;
     white-space: nowrap;
 }
+.cta-link {
+    background-color: var(--primary-green);
+    color: var(--dark-gray);
+    border: none;
+    padding: 19.11px 48px;
+    border-radius: 33.444px;
+    font-weight: 700;
+    font-size: 21.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: -0.2986px;
+    font-family: 'Onest', sans-serif;
+    position: relative;
+    width: 248.444px;
+    height: 66.667px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    gap:12px;
+    text-decoration: none; /* removes underline */
+}
 
 .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(151, 244, 186, 0.3);
+}
+.cta-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(151, 244, 186, 0.3);
 }
