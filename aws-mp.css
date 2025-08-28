@@ -66,7 +66,7 @@ body {
     display: flex;
     align-items: center;
     padding: 121px 100px 86px 100px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/hero-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/hero-aws-mp-bg.png');
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -373,8 +373,8 @@ body {
 }
 
 .faq-icon {
-    width: 36px;
-    height: 36px;
+    width: 21px;
+    height: 21px;
     transition: transform 0.3s ease;
 }
 
