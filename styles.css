@@ -1209,14 +1209,115 @@ body {
         font-size: 48px;
     }
     
+    /* Products Section Tablet Styles */
+    .products {
+        padding: 70px 40px;
+        max-width: 100%;
+    }
+    
     .products-grid {
         flex-direction: column;
         align-items: center;
+        gap: 60px;
     }
     
     .product-card {
         width: 100%;
         max-width: 777px;
+        padding: 35px 30px;
+    }
+    
+    .card-header h3 {
+        font-size: 24px;
+        margin-left: 100px;
+    }
+    
+    .card-body h4 {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+    
+    .card-body p {
+        font-size: 22px;
+        line-height: 1.4;
+        margin-bottom: 40px;
+    }
+    
+    .features-grid {
+        gap: 50px 0;
+    }
+    
+    .feature span {
+        font-size: 18px;
+    }
+    
+    .learn-more-btn {
+        padding: 14px 20px;
+        font-size: 18px;
+        border-radius: 28px;
+        margin-top: 30px;
+    }
+    
+    /* Service Cards Tablet Styles */
+    .service-card {
+        padding: 25px 20px;
+        border-radius: 40px;
+    }
+    
+    .service-card h3 {
+        font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+    
+    .service-card > p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+    
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    
+    .service-features {
+        gap: 20px;
+    }
+    
+    .service-features li {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    /* Mission Section Tablet Styles */
+    .mission {
+        padding: 80px 40px;
+        margin: 30px 40px;
+        border-radius: 40px;
+    }
+    
+    .mission-content {
+        max-width: 100%;
+    }
+    
+    .mission .section-header {
+        margin-bottom: 60px;
+    }
+    
+    .mission h3 {
+        font-size: 60px;
+        line-height: 72px;
+        letter-spacing: -0.9px;
+        margin-bottom: 30px;
+    }
+    
+    .mission > p {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 60px;
+        max-width: 900px;
     }
     
     .mission-grid {
@@ -1224,9 +1325,189 @@ body {
         gap: 60px;
     }
     
+    .mission-item {
+        gap: 30px;
+    }
+    
+    .mission-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 25px;
+    }
+    
+    .mission-item h4 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .mission-item p {
+        font-size: 22px;
+        line-height: 32px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    /* Mission Section Tablet Styles for Quick Start page */
+    .mission-section {
+        padding: 80px 40px;
+        margin: 30px 40px;
+        border-radius: 40px;
+    }
+    
+    .mission-content-quickstart {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+    
+    .mission-left {
+        gap: 25px;
+    }
+    
+    .mission-left h2 {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.7px;
+    }
+    
+    .mission-divider {
+        display: none;
+    }
+    
+    .mission-right {
+        gap: 30px;
+    }
+    
+    .mission-tag {
+        gap: 15px;
+    }
+    
+    .mission-tag span {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .mission-description {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    /* Expertise Section Tablet Styles */
     .expertise {
         flex-direction: column;
         gap: 60px;
+        padding: 60px 40px;
+    }
+    
+    .expertise-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .expertise-container-image {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+    
+    .expertise-content {
+        width: 100%;
+        max-width: 800px;
+    }
+    
+    .expertise-content > p {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+    
+    .content-header h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .superpower-header h4 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .superpower-item p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    
+    /* Why Choose Us Section Tablet Styles */
+    .why-choose-us {
+        padding: 80px 40px;
+        margin: 30px 0;
+    }
+    
+    .why-choose-header {
+        gap: 50px;
+        margin-bottom: 80px;
+    }
+    
+    .partner-logo-container {
+        gap: 35px;
+    }
+    
+    .partner-logo {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .why-choose-header .partner-logo-container h3 {
+        font-size: 48px;
+        line-height: 64px;
+        letter-spacing: -0.9px;
+    }
+    
+    .why-choose-text {
+        gap: 35px;
+    }
+    
+    .why-choose-label h4 {
+        font-size: 26px;
+        letter-spacing: 1.2px;
+    }
+    
+    .text-content p {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 18px;
+    }
+    
+    .stats-grid {
+        gap: 35px;
+    }
+    
+    .stat-item {
+        padding: 35px 30px;
+        border-radius: 45px;
+    }
+    
+    .stat-item h5 {
+        font-size: 60px;
+        margin-bottom: 12px;
+    }
+    
+    .stat-item p {
+        font-size: 28px;
+    }
+    
+    /* Stat Cards Tablet Styles */
+    .stat-card {
+        padding: 35px 30px;
+        border-radius: 45px;
+    }
+    
+    .stat-card h3 {
+        font-size: 60px;
+        margin-bottom: 12px;
+    }
+    
+    .stat-card p {
+        font-size: 28px;
     }
     
     .expertise-diagram {
@@ -1240,6 +1521,12 @@ body {
         gap: 30px;
     }
     
+    /* Resources Section Tablet Styles */
+    .resources {
+        padding: 70px 40px;
+        max-width: 100%;
+    }
+    
     .resources-grid {
         flex-direction: column;
         gap: 60px;
@@ -1247,6 +1534,39 @@ body {
     
     .featured-resource {
         width: 100%;
+        padding: 18px;
+    }
+    
+    .resource-content h3 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    
+    .resource-content p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .resource-image {
+        height: 320px;
+    }
+    
+    .resources-list {
+        gap: 40px;
+    }
+    
+    .resource-item {
+        gap: 25px;
+    }
+    
+    .resource-item-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .resource-item-content h4 {
+        font-size: 28px;
+        line-height: 38px;
     }
     
     .cta-content {
@@ -1287,18 +1607,292 @@ body {
         font-size: 36px;
     }
     
+    /* Products Section Mobile Styles */
+    .products {
+        padding: 60px 20px;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .products-grid {
+        gap: 40px;
+    }
+    
+    .product-card {
+        padding: 25px 20px;
+        border-radius: 40px;
+    }
+    
+    .card-header {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+    
+    .product-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    
+    .product-icon img {
+        width: 30px;
+        height: 25px;
+    }
+    
+    .card-header h3 {
+        font-size: 20px;
+        margin-left: 60px;
+        transform: translateX(-30px);
+    }
+    
+    .card-body h4 {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+    
+    .card-body p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 25px 0;
+    }
+    
+    .feature {
+        gap: 12px;
+    }
+    
+    .feature img {
+        width: 24px;
+        height: 26px;
+    }
+    
+    .feature span {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    .learn-more-btn {
+        padding: 12px 18px;
+        font-size: 16px;
+        border-radius: 25px;
+        margin-top: 25px;
+    }
+    
+    /* Service Cards Mobile Styles */
+    .service-card {
+        padding: 20px 15px;
+        border-radius: 30px;
+    }
+    
+    .service-card h3 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 18px;
+    }
+    
+    .service-card > p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 18px;
+    }
+    
+    .service-features {
+        gap: 18px;
+    }
+    
+    .service-features li {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+    
+    /* Mission Section Mobile Styles */
     .mission {
         padding: 60px 20px;
         margin: 20px;
+        border-radius: 30px;
+    }
+    
+    .mission-content {
+        max-width: 100%;
+    }
+    
+    .mission .section-header {
+        margin-bottom: 40px;
     }
     
     .mission h3 {
         font-size: 48px;
         line-height: 56px;
+        letter-spacing: -0.8px;
+        margin-bottom: 25px;
     }
     
+    .mission > p {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 50px;
+        max-width: 100%;
+    }
+    
+    .mission-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .mission-item {
+        gap: 20px;
+    }
+    
+    .mission-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 20px;
+    }
+    
+    .mission-item h4 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .mission-item p {
+        font-size: 18px;
+        line-height: 26px;
+        max-width: 100%;
+    }
+    
+    /* Mission Section Mobile Styles for Quick Start page */
+    .mission-section {
+        padding: 60px 20px;
+        margin: 20px;
+        border-radius: 30px;
+    }
+    
+    .mission-content-quickstart {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .mission-left {
+        gap: 20px;
+    }
+    
+    .mission-left h2 {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.6px;
+    }
+    
+    .mission-divider {
+        display: none;
+    }
+    
+    .mission-right {
+        gap: 25px;
+    }
+    
+    .mission-tag {
+        gap: 12px;
+    }
+    
+    .mission-tag span {
+        font-size: 18px;
+        letter-spacing: 0.9px;
+    }
+    
+    .mission-description {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    
+    /* Expertise Section Mobile Styles */
     .expertise {
         padding: 40px 20px;
+        gap: 40px;
+    }
+    
+    .expertise-container {
+        gap: 30px;
+    }
+    
+    .expertise-container-image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .expertise-content {
+        gap: 20px;
+    }
+    
+    .expertise-content > p {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    
+    .content-header {
+        gap: 15px;
+    }
+    
+    .content-header h2 {
+        font-size: 20px;
+        letter-spacing: 0.8px;
+    }
+    
+    .superpowers {
+        gap: 15px;
+    }
+    
+    .superpower-item {
+        padding-bottom: 15px;
+    }
+    
+    .superpower-header {
+        gap: 12px;
+    }
+    
+    .superpower-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+    }
+    
+    .superpower-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .superpower-header h4 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    
+    .expand-icon {
+        width: 14px;
+        height: 8px;
+    }
+    
+    .superpower-item p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 15px;
     }
     
     .why-choose-us {
@@ -1310,8 +1904,188 @@ body {
         gap: 40px;
     }
     
+    /* Why Choose Us Section Mobile Styles */
+    .why-choose-us {
+        padding: 60px 20px;
+        margin: 20px 0;
+    }
+    
+    .why-choose-header {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    .partner-logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .partner-logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0;
+    }
+    
+    .why-choose-header .partner-logo-container h3 {
+        font-size: 36px;
+        line-height: 48px;
+        letter-spacing: -0.8px;
+    }
+    
+    .why-choose-text {
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .why-choose-label {
+        gap: 15px;
+    }
+    
+    .why-choose-label h4 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .text-content p {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .stats-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .stat-item {
+        padding: 30px 25px;
+        border-radius: 40px;
+    }
+    
+    .stat-item h5 {
+        font-size: 48px;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+    
+    .stat-item p {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    
+    /* Stat Cards Mobile Styles */
+    .stat-card {
+        padding: 30px 25px;
+        border-radius: 40px;
+    }
+    
+    .stat-card h3 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    
+    .stat-card p {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    
     .divider-line {
         display: none;
+    }
+    
+    /* Resources Section Mobile Styles */
+    .resources {
+        padding: 60px 20px;
+        max-width: 100%;
+    }
+    
+    .resources-header {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    
+    .resources-header-text {
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .resources-header h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 32px;
+    }
+    
+    .resources-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .featured-resource {
+        width: 100%;
+        padding: 15px;
+        border-radius: 30px;
+    }
+    
+    .resource-content h3 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.4px;
+    }
+    
+    .resource-content p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    .resource-image {
+        height: 250px;
+        border-radius: 25px;
+    }
+    
+    .resource-meta {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .resources-list {
+        gap: 30px;
+    }
+    
+    .resource-item {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 30px;
+    }
+    
+    .resource-item-image {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+    }
+    
+    .resource-item-content h4 {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: -0.3px;
+    }
+    
+    .resource-item-meta {
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .learn-more-btn {
+        padding: 14px 20px;
+        font-size: 18px;
+        border-radius: 28px;
+        margin-top: 25px;
     }
     
     .cta-section {
@@ -1336,6 +2110,397 @@ body {
     .footer-menu {
         flex-direction: column;
         gap: 40px;
+    }
+}
+
+/* Small Mobile Responsive Styles */
+@media (max-width: 480px) {
+    .resources {
+        padding: 40px 15px;
+    }
+    
+    .resources-header h2 {
+        font-size: 20px;
+        letter-spacing: 0.8px;
+        line-height: 28px;
+    }
+    
+    .featured-resource {
+        padding: 12px;
+        border-radius: 25px;
+    }
+    
+    .resource-content h3 {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.3px;
+    }
+    
+    .resource-content p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    .resource-image {
+        height: 200px;
+        border-radius: 20px;
+    }
+    
+    .resource-tag {
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 18px;
+    }
+    
+    .resource-date {
+        font-size: 16px;
+    }
+    
+    .resource-item-content h4 {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.25px;
+    }
+    
+    .resource-item-image {
+        height: 160px;
+        border-radius: 15px;
+    }
+    
+    .learn-more-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 25px;
+        margin-top: 20px;
+    }
+    
+    /* Expertise Section Small Mobile Styles */
+    .expertise {
+        padding: 30px 15px;
+        gap: 30px;
+    }
+    
+    .expertise-container {
+        gap: 25px;
+    }
+    
+    .expertise-content > p {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    
+    .content-header h2 {
+        font-size: 18px;
+        letter-spacing: 0.6px;
+    }
+    
+    .superpower-header h4 {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    
+    .superpower-icon {
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+    }
+    
+    .superpower-icon img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .superpower-item p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 12px;
+    }
+    
+    .expand-icon {
+        width: 12px;
+        height: 7px;
+    }
+    
+    /* Products Section Small Mobile Styles */
+    .products {
+        padding: 40px 15px;
+    }
+    
+    .section-header h2 {
+        font-size: 20px;
+        letter-spacing: 0.8px;
+    }
+    
+    .product-card {
+        padding: 20px 15px;
+        border-radius: 30px;
+    }
+    
+    .product-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 18px;
+    }
+    
+    .product-icon img {
+        width: 26px;
+        height: 22px;
+    }
+    
+    .card-header h3 {
+        font-size: 18px;
+        margin-left: 50px;
+        transform: translateX(-25px);
+    }
+    
+    .card-body h4 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 25px;
+    }
+    
+    .card-body p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+    
+    .features-grid {
+        gap: 20px 0;
+    }
+    
+    .feature {
+        gap: 10px;
+    }
+    
+    .feature img {
+        width: 20px;
+        height: 22px;
+    }
+    
+    .feature span {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .learn-more-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+        border-radius: 22px;
+        margin-top: 20px;
+    }
+    
+    /* Service Cards Responsive Styles for AWS MP page */
+    .service-card {
+        padding: 20px 15px;
+        border-radius: 30px;
+    }
+    
+    .service-card h3 {
+        font-size: 18px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+    
+    .service-card > p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+    
+    .service-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 18px;
+    }
+    
+    .service-features {
+        gap: 15px;
+    }
+    
+    .service-features li {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    /* Why Choose Us Section Small Mobile Styles */
+    .why-choose-us {
+        padding: 40px 15px;
+        margin: 15px 0;
+    }
+    
+    .why-choose-header {
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .partner-logo-container {
+        gap: 20px;
+    }
+    
+    .partner-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .why-choose-header .partner-logo-container h3 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.6px;
+    }
+    
+    .why-choose-text {
+        gap: 25px;
+    }
+    
+    .why-choose-label {
+        gap: 12px;
+    }
+    
+    .why-choose-label h4 {
+        font-size: 20px;
+        letter-spacing: 0.8px;
+    }
+    
+    .text-content p {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 12px;
+    }
+    
+    .stats-grid {
+        gap: 20px;
+    }
+    
+    .stat-item {
+        padding: 25px 20px;
+        border-radius: 30px;
+    }
+    
+    .stat-item h5 {
+        font-size: 36px;
+        margin-bottom: 8px;
+    }
+    
+    .stat-item p {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    
+    /* Stat Cards Responsive Styles for Agent Bills page */
+    .stat-card {
+        padding: 25px 20px;
+        border-radius: 30px;
+    }
+    
+    .stat-card h3 {
+        font-size: 36px;
+        margin-bottom: 8px;
+    }
+    
+    .stat-card p {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    
+    /* Mission Section Small Mobile Styles */
+    .mission {
+        padding: 40px 15px;
+        margin: 15px;
+        border-radius: 25px;
+    }
+    
+    .mission-content {
+        max-width: 100%;
+    }
+    
+    .mission .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .mission h3 {
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: -0.7px;
+        margin-bottom: 20px;
+    }
+    
+    .mission > p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+    
+    .mission-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .mission-item {
+        gap: 15px;
+    }
+    
+    .mission-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 15px;
+    }
+    
+    .mission-item h4 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    
+    .mission-item p {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 100%;
+    }
+    
+    /* Mission Section Responsive Styles for Quick Start page */
+    .mission-section {
+        padding: 40px 15px;
+        margin: 15px;
+        border-radius: 25px;
+    }
+    
+    .mission-content-quickstart {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .mission-left {
+        gap: 15px;
+    }
+    
+    .mission-left h2 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.5px;
+    }
+    
+    .mission-divider {
+        display: none;
+    }
+    
+    .mission-right {
+        gap: 20px;
+    }
+    
+    .mission-tag {
+        gap: 10px;
+    }
+    
+    .mission-tag span {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+    
+    .mission-description {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
