@@ -83,15 +83,16 @@
                 <div class="video-title">AWS Marketplace</div>
             </div>
         </section>
-        <!-- Featured Resource Carousel -->
+
+        <!-- Featured Resource -->
         <section class="featured-resource-section">
-            <div class="featured-carousel">
-                <div class="featured-carousel-container">
+            <div class="featured-position">
+                <div class="featured-container">
                     <!-- Featured Resource Card 1 - CFM -->
                     <div class="featured-resource-card active" data-category="cfm">
                         <div class="featured-content">
                             <div class="featured-text">
-                                <h2>1. AI Agent Development Framework</h2>
+                                <h2>AI Agent Development Framework</h2>
                                 <p>Comprehensive framework for developing AI agents that can handle complex tasks and integrate seamlessly with your existing systems.</p>
                                 <button class="view-button">
                                     <span>View</span>
@@ -103,102 +104,32 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Featured Resource Card 2 - FinOps Center -->
-                    <div class="featured-resource-card" data-category="finops">
-                        <div class="featured-content">
-                            <div class="featured-text">
-                                <h2>2. FinOps Center Implementation Guide</h2>
-                                <p>Comprehensive guide to implementing FinOps Center for optimal cloud cost management. Learn best practices and strategies for maximizing your cloud investment.</p>
-                                <button class="view-button">
-                                    <span>View</span>
-                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
-                                </button>
-                            </div>
-                            <div class="featured-image">
-                                <img src="./assets/images/labtop.svg" alt="FinOps Center Dashboard">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Featured Resource Card 3 - Case Study -->
-                    <div class="featured-resource-card" data-category="case-study">
-                        <div class="featured-content">
-                            <div class="featured-text">
-                                <h2>3. Cloud Cost Optimization Case Study</h2>
-                                <p>Real-world case study showing how a Fortune 500 company reduced their cloud costs by 40% using our FinOps Center solution.</p>
-                                <button class="view-button">
-                                    <span>View</span>
-                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
-                                </button>
-                            </div>
-                            <div class="featured-image">
-                                <img src="./assets/images/marketing.svg" alt="Cloud Cost Optimization">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Featured Resource Card 4 - AWS Marketplace -->
-                    <div class="featured-resource-card" data-category="aws-marketplace">
-                        <div class="featured-content">
-                            <div class="featured-text">
-                                <h2>4. Product documentation for AWS Marketplace</h2>
-                                <p>A case study of how one ISV leveraged AWS Marketplace to scale their SaaS solution rapidly. Lorem Ipsum is simply dummy text that has been used since the 1500s</p>
-                                <button class="view-button">
-                                    <span>View</span>
-                                    <img src="./assets/icons/arrow-link.svg" alt="View link">
-                                </button>
-                            </div>
-                            <div class="featured-image">
-                                <img src="./assets/images/analytics.svg" alt="AWS Marketplace Documentation">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carousel Navigation -->
-                <div class="featured-carousel-nav">
-                    <div class="carousel-filter-tabs">
-                        <button class="carousel-filter-tab active" data-filter="all">
-                            <img src="./assets/icons/carousel-icon.svg" alt="All" class="filter-icon">
-                        </button>
-                        <button class="carousel-filter-tab" data-filter="cfm">
-                            <span>CFM</span>
-                        </button>
-                        <button class="carousel-filter-tab" data-filter="finops">
-                            <span>FinOPS Center</span>
-                        </button>
-                        <button class="carousel-filter-tab" data-filter="case-study">
-                            <span>Case Study</span>
-                        </button>
-                        <button class="carousel-filter-tab" data-filter="aws-marketplace">
-                            <span>AWS Marketplace</span>
-                        </button>
-                    </div>
-                    
-                    <div class="carousel-pagination">
-                        <button class="carousel-btn prev" aria-label="Previous featured resource">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
-                                <path d="M30 15L20 25L30 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        
-                        <button class="carousel-page-info" aria-label="Click to view page details">Page 1 of 4</button>
-                        
-                        <button class="carousel-btn next" aria-label="Next featured resource">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="25" cy="25" r="25" fill="rgba(255,255,255,0.1)"/>
-                                <path d="M20 15L30 25L20 35" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Resources Grid -->
         <section class="resources-grid-section">
+             <!-- Filters  -->
+             <div class="featured-filter-nav">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">
+                        <img src="./assets/icons/all-icon.svg" alt="All" class="filter-icon">
+                    </button>
+                    <button class="filter-tab" data-filter="cfm">
+                        <span>CFM</span>
+                    </button>
+                    <button class="filter-tab" data-filter="finops">
+                        <span>FinOPS Center</span>
+                    </button>
+                    <button class="filter-tab" data-filter="case-study">
+                        <span>Case Study</span>
+                    </button>
+                    <button class="filter-tab" data-filter="aws-marketplace">
+                        <span>AWS Marketplace</span>
+                    </button>
+                </div>
+            </div>
             <div class="resources-grid">
                 <!-- Resource Card 1 -->
                 <div class="resource-card">
