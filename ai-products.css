@@ -263,6 +263,17 @@ body {
 }
 
 /* Architecture Section */
+.agentic-architecture {
+    width: 1400px;
+    height: 900px;
+    object-fit: cover;
+}
+.architecture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .architecture-section {
     background-color: #222222;
     padding: 82px 0;
