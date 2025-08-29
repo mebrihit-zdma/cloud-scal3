@@ -591,9 +591,89 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1400px) {
+    .resources-main {
+        margin: 0 50px;
+    }
+    
+    .hero-section {
+        height: 400px;
+        margin-bottom: 60px;
+    }
+    
+    .marketplace-video {
+        height: 800px;
+        margin-bottom: 60px;
+    }
+    
+    .page-title h1 {
+        font-size: 56px;
+    }
+    
+    .video-title {
+        font-size: 48px;
+        left: 40px;
+        bottom: 30px;
+    }
+    
+    .video-duration {
+        font-size: 28px;
+    }
+    
+    .featured-container {
+        height: 550px;
+    }
+    
+    .featured-resource-card {
+        padding: 40px;
+    }
+    
+    .featured-text h2 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+    
+    .featured-text p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    
+    .featured-image {
+        height: 450px;
+    }
+    
+    .view-button {
+        font-size: 20px;
+        padding: 14px 20px;
+    }
+    
+    .resources-grid {
+        gap: 40px;
+    }
+    
+    .resource-content h3 {
+        font-size: 32px;
+        line-height: 44px;
+    }
+    
+    .resource-image {
+        height: 280px;
+    }
+}
+
 @media (max-width: 1200px) {
     .resources-main {
-        padding: 0 50px;
+        margin: 0 30px;
+    }
+    
+    .hero-section {
+        height: 350px;
+        margin-bottom: 50px;
+    }
+    
+    .marketplace-video {
+        height: 700px;
+        margin-bottom: 50px;
     }
     
     .page-title h1 {
@@ -653,15 +733,55 @@
         font-size: 18px;
         line-height: 28px;
     }
+    
+    .video-title {
+        font-size: 40px;
+        left: 30px;
+        bottom: 25px;
+    }
+    
+    .video-duration {
+        font-size: 24px;
+    }
+    
+    .resources-grid {
+        gap: 30px;
+    }
+    
+    .resource-content h3 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    
+    .resource-image {
+        height: 250px;
+    }
 }
 
 @media (max-width: 768px) {
     .resources-main {
-        padding: 0 20px;
+        margin: 0 20px;
+    }
+    
+    .hero-section {
+        height: 300px;
+        margin-bottom: 40px;
+        margin-top: 80px;
+    }
+    
+    .marketplace-video {
+        height: 500px;
+        margin-bottom: 40px;
+        border-radius: 16px;
+    }
+    
+    .page-title {
+        margin: 40px 0 0px 0;
     }
     
     .page-title h1 {
         font-size: 36px;
+        line-height: 1.2;
     }
     
     .featured-container {
@@ -685,6 +805,13 @@
     
     .featured-image {
         height: 300px;
+        border-radius: 24px;
+    }
+    
+    .view-button {
+        font-size: 16px;
+        padding: 12px 18px;
+        border-radius: 32px;
     }
     
     .featured-filter-nav {
@@ -704,6 +831,7 @@
         font-size: 16px;
         padding: 6px 12px;
         height: 40px;
+        border-radius: 20px;
     }
     
     .carousel-btn {
@@ -735,38 +863,10 @@
     .filter-tabs {
         flex-wrap: wrap;
     }
-}
-
-@media (max-width: 768px) {
-    .resources-main {
-        padding: 0 20px;
-    }
-    
-    .page-title h1 {
-        font-size: 36px;
-    }
-    
-    .featured-resource-card {
-        padding: 30px;
-        border-radius: 30px;
-    }
-    
-    .featured-text h2 {
-        font-size: 32px;
-        line-height: 40px;
-    }
-    
-    .featured-text p {
-        font-size: 18px;
-    }
-    
-    .featured-image {
-        height: 300px;
-    }
     
     .resource-card {
-        border-radius: 30px;
-        padding: 15px;
+        border-radius: 32px;
+        padding: 16px;
     }
     
     .resource-content h3 {
@@ -774,23 +874,197 @@
         line-height: 32px;
     }
     
-    .filter-tabs {
-        gap: 10px;
+    .resource-image {
+        height: 200px;
+        border-radius: 24px;
     }
     
-    .filter-tab {
-        font-size: 18px;
-        padding: 8px 16px;
+    .resource-meta {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .resource-tag {
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 16px;
+    }
+    
+    .resource-date {
+        font-size: 16px;
     }
     
     .video-title {
-        font-size: 36px;
-        left: 30px;
-        bottom: 30px;
+        font-size: 28px;
+        left: 20px;
+        bottom: 20px;
     }
     
     .video-duration {
+        font-size: 20px;
+    }
+    
+    .play-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .play-overlay svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resources-main {
+        margin: 0 15px;
+    }
+    
+    .hero-section {
+        height: 250px;
+        margin-bottom: 30px;
+        margin-top: 60px;
+    }
+    
+    .marketplace-video {
+        height: 400px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+    }
+    
+    .page-title {
+        margin: 30px 0 0px 0;
+    }
+    
+    .page-title h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .featured-container {
+        height: 350px;
+    }
+    
+    .featured-resource-card {
+        padding: 20px;
+        border-radius: 24px;
+    }
+    
+    .featured-text h2 {
         font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .featured-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .featured-image {
+        height: 250px;
+        border-radius: 20px;
+    }
+    
+    .view-button {
+        font-size: 14px;
+        padding: 10px 16px;
+        border-radius: 24px;
+    }
+    
+    .featured-filter-nav {
+        gap: 12px;
+        margin-top: 16px;
+    }
+    
+    .filter-tabs {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .filter-tab {
+        font-size: 14px;
+        padding: 6px 10px;
+        height: 36px;
+        border-radius: 18px;
+    }
+    
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .carousel-btn svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .carousel-page-info {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .resources-grid {
+        gap: 24px;
+    }
+    
+    .resource-card {
+        border-radius: 24px;
+        padding: 12px;
+    }
+    
+    .resource-content h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    .resource-image {
+        height: 180px;
+        border-radius: 20px;
+    }
+    
+    .resource-meta {
+        gap: 6px;
+    }
+    
+    .resource-tag {
+        font-size: 12px;
+        padding: 4px 8px;
+        border-radius: 12px;
+    }
+    
+    .resource-date {
+        font-size: 14px;
+    }
+    
+    .video-title {
+        font-size: 24px;
+        left: 15px;
+        bottom: 15px;
+    }
+    
+    .video-duration {
+        font-size: 18px;
+    }
+    
+    .play-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .play-overlay svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .featured-content {
+        gap: 20px;
+    }
+    
+    .filter-icon {
+        width: 18px;
+        height: 19px;
     }
 }
 
