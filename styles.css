@@ -1352,7 +1352,6 @@ body {
     .mission-content-quickstart {
         flex-direction: column;
         gap: 50px;
-        text-align: center;
     }
     
     .mission-left {
@@ -1788,7 +1787,6 @@ body {
     .mission-content-quickstart {
         flex-direction: column;
         gap: 40px;
-        text-align: center;
     }
     
     .mission-left {
@@ -2466,7 +2464,6 @@ body {
     .mission-content-quickstart {
         flex-direction: column;
         gap: 30px;
-        text-align: center;
     }
     
     .mission-left {
