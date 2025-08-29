@@ -791,7 +791,7 @@ body {
 .why-choose-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     margin-bottom: 96px;
 }
 .partner-logo {
@@ -818,7 +818,6 @@ body {
 
 .divider-line {
     width: 1px;
-    height: 416px;
     background: #7c7c7c;
     margin: 0 40px;
 }
@@ -1218,13 +1217,11 @@ body {
     
     .products-grid {
         flex-direction: column;
-        align-items: center;
         gap: 60px;
     }
     
     .product-card {
         width: 100%;
-        max-width: 777px;
         padding: 35px 30px;
     }
     
@@ -1403,18 +1400,16 @@ body {
     .expertise-container {
         flex-direction: column;
         gap: 40px;
-        align-items: center;
+        width: 100%;
     }
     
     .expertise-container-image {
         width: 100%;
-        max-width: 600px;
         height: auto;
     }
     
     .expertise-content {
         width: 100%;
-        max-width: 800px;
     }
     
     .expertise-content > p {

@@ -260,7 +260,7 @@ body {
     background-color: var(--white);
     border-radius: 30px;
     padding: 24px;
-    height: 302px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     border: 2px solid rgba(0, 0, 0, 0.05);
