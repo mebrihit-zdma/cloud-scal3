@@ -23,7 +23,6 @@
     font-size: 64px;
     line-height: 1.2;
     color: var(--white);
-    margin-bottom: 35px;
     max-width: 831px;
 }
 
@@ -60,7 +59,7 @@
 
 /* Testimonial Section */
 .testimonial-section {
-    padding: 80px 100px;
+    padding: 4px 100px;
     background-color: var(--dark-gray);
 }
 
@@ -247,12 +246,14 @@
 @media (max-width: 1200px) {
     .about-hero-content {
         flex-direction: column;
-        text-align: center;
         gap: 40px;
     }
-    
+    .about-hero-description{
+        max-width: unset;
+    }
     .about-hero-text h1 {
         font-size: 48px;
+        margin-top: 50px;
     }
     
     .about-hero-description p {
@@ -295,7 +296,10 @@
     .about-hero,
     .hero-image-section,
     .testimonial-section {
-        padding: 40px 20px;
+        padding: 4px 20px;
+    }
+    .about-hero{
+        margin-top: 100px;
     }
     
     .about-hero-text h1 {
