@@ -1588,6 +1588,9 @@ body {
     .footer-left {
         max-width: 100%;
     }
+    .cta-section{
+        margin: 30px;
+    }
 }
 
 @media (max-width: 768px) {
