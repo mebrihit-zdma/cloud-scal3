@@ -1,6 +1,11 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    
+    // Load navbar.html into #navbar
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
     // Accordion functionality for Expertise Section
     const superpowerItems = document.querySelectorAll('.superpower-item');
     
