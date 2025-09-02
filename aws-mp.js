@@ -18,17 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navigation menu interactions
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all menu items
-            menuItems.forEach(menuItem => menuItem.classList.remove('active'));
-            // Add active class to clicked item
-            this.classList.add('active');
-        });
-    });
-
     // FAQ Accordion functionality
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {

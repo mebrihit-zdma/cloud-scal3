@@ -51,16 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navigation active state
-    const navItems = document.querySelectorAll('.nav-item');
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all items
-            navItems.forEach(nav => nav.classList.remove('active'));
-            // Add active class to clicked item
-            this.classList.add('active');
-        });
-    });
 
     // Add loading animation for activity cards
     function animateActivityCards() {
@@ -115,17 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Form submitted');
         });
     });
-
-    // Mobile menu toggle (if needed)
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    }
 
     // Add scroll to top functionality
     const scrollToTopBtn = document.createElement('button');

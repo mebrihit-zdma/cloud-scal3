@@ -138,29 +138,6 @@ function initNavigationDots() {
     if (nextButton) nextButton.disabled = totalSlides <= 1;
 }
 
-// Dropdown Menu Functionality - Removed hover-based logic to use click-based from script.js
-// function initDropdownMenu() {
-//     const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
-//     
-//     dropdownItems.forEach(item => {
-//         const dropdownMenu = item.querySelector('.dropdown-menu');
-//         
-//         // Show dropdown on hover
-//         item.addEventListener('mouseenter', function() {
-//             dropdownMenu.style.opacity = '1';
-//             dropdownMenu.style.visibility = 'visible';
-//             dropdownMenu.style.transform = 'translateY(0)';
-//         });
-//         
-//         // Hide dropdown when mouse leaves
-//         item.addEventListener('mouseleave', function() {
-//             dropdownMenu.style.opacity = '0';
-//             dropdownMenu.style.visibility = 'hidden';
-//             dropdownMenu.style.transform = 'translateY(-10px)';
-//         });
-//     });
-// }
-
 // Smooth Scrolling for Anchor Links
 function initSmoothScrolling() {
     const links = document.querySelectorAll('a[href^="#"]');
@@ -199,21 +176,6 @@ function initButtonHoverEffects() {
     });
 }
 
-// Video Play Functionality
-function initVideoPlay() {
-    const playButtons = document.querySelectorAll('.play-button, .play-overlay');
-    
-    playButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Add video play functionality here
-            console.log('Video play clicked');
-            
-            // Example: Open video modal or play video
-            // You can implement a video modal or direct video player here
-        });
-    });
-}
-
 // Pricing Card Hover Effects
 function initPricingCardEffects() {
     const pricingCards = document.querySelectorAll('.pricing-card');
@@ -230,12 +192,6 @@ function initPricingCardEffects() {
         });
     });
 }
-
-// Initialize additional effects
-document.addEventListener('DOMContentLoaded', function() {
-    initVideoPlay();
-    initPricingCardEffects();
-});
 
 // Scroll-based animations
 function initScrollAnimations() {
@@ -269,46 +225,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
 });
 
-// Form handling for demo requests
-function initFormHandling() {
-    const demoButtons = document.querySelectorAll('.btn-white');
-    
-    demoButtons.forEach(button => {
-        if (button.textContent.includes('Demo')) {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Add demo request functionality here
-                console.log('Demo requested');
-                
-                // Example: Open contact form or redirect to demo page
-                // window.location.href = '/demo-request';
-            });
-        }
-    });
-}
-
-// Initialize form handling
-document.addEventListener('DOMContentLoaded', function() {
-    initFormHandling();
-});
-
-// Mobile menu toggle (if needed)
-function initMobileMenu() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
-    }
-}
-
-// Initialize mobile menu
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-});
 
 // Performance optimization: Lazy loading for images
 function initLazyLoading() {
