@@ -614,6 +614,7 @@ body {
 @media (max-width: 1200px) {
     .container {
         padding: 0 50px;
+        margin: unset;
     }
     
     .top-nav {
@@ -817,6 +818,7 @@ body {
     
     .process-section {
         padding: 60px 0;
+        margin: unset;
     }
     
     .process-title {
