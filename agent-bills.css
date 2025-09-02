@@ -1067,10 +1067,6 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1400px) {
-    .nav-container {
-        gap: 200px;
-    }
-    
     .hero {
         padding: 121px 50px;
         height: auto;
@@ -1136,9 +1132,6 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .nav-container {
-        gap: 100px;
-    }
     
     .hero {
         padding: 100px 30px;
@@ -1278,24 +1271,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0 20px;
-        height: 80px;
-    }
-    
-    .nav-container {
-        gap: 20px;
-    }
-    
-    .logo img {
-        height: 30px;
-        width: 85px;
-    }
-    
-    .nav-menu {
-        display: none;
-    }
-    
+   
     .cta-button {
         padding: 12px 20px;
         font-size: 16px;
@@ -1521,10 +1497,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        padding: 0 15px;
-    }
-    
+  
     .hero {
         padding: 40px 15px;
         height: auto;

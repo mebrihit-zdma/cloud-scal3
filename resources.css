@@ -1,6 +1,5 @@
 /* Resources Page Specific Styles */
 
-/* Navigation styles are now handled by styles.css */
 
 /* Hero Video Section */
 .hero-section {
@@ -202,7 +201,6 @@
     object-fit: cover;
 }
 
-/* Featured Carousel Navigation */
 .featured-filter-nav {
     display: flex;
     justify-content: space-between;

@@ -787,10 +787,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .navbar {
-        padding: 0 50px;
-    }
-    
+   
     .hero {
         padding: 121px 50px;
     }
@@ -903,18 +900,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0 20px;
-        height: 80px;
-    }
-    
-    .nav-container {
-        gap: 20px;
-    }
-    
-    .nav-menu {
-        display: none;
-    }
     
     .hero {
         padding: 80px 20px;
