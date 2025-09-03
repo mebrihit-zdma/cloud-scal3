@@ -47,7 +47,6 @@ class MyNavbar extends HTMLElement {
                   </a>
                   <a class="mobile-cta-link" href="about-us.html">
                       Buy Now
-                      <img src="./assets/icons/arrow-link-black.svg" alt="Arrow">
                   </a>
                 </div>
               </div>
