@@ -40,6 +40,17 @@ class MyNavbar extends HTMLElement {
               <div class="nav-item">
                 <a href="about-us.html" style="text-decoration: none; color: inherit;">About Us</a>
               </div>
+              <div class="mobile-cta-container">
+                <div class="mobile-cta">
+                  <a class="mobile-cta-link-white" href="about-us.html">
+                      Schedule a Demo
+                  </a>
+                  <a class="mobile-cta-link" href="about-us.html">
+                      Buy Now
+                      <img src="./assets/icons/arrow-link-black.svg" alt="Arrow">
+                  </a>
+                </div>
+              </div>
             </div>
             
             <a class="cta-link" href="about-us.html">
