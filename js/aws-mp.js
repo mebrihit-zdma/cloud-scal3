@@ -1,6 +1,12 @@
 // AWS MP Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Ensure hero section is always visible
+    const heroSection = document.querySelector('.hero-section');
+    if (heroSection) {
+        heroSection.style.opacity = '1';
+        heroSection.style.transform = 'translateY(0)';
+    }
     // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
@@ -200,30 +206,31 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('revealed');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
     }, { threshold: 0.1 });
 
     sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        // Only apply animation to sections that are not the hero section
+        if (!section.classList.contains('hero-section')) {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        }
         sectionObserver.observe(section);
     });
 
-    // Add revealed class when section comes into view
-    document.addEventListener('scroll', function() {
+    // Fallback: ensure all sections are visible after 2 seconds if intersection observer fails
+    setTimeout(() => {
         sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            
-            if (rect.top < windowHeight * 0.8) {
-                section.classList.add('revealed');
+            if (section.style.opacity === '0') {
                 section.style.opacity = '1';
                 section.style.transform = 'translateY(0)';
             }
         });
-    });
+    }, 2000);
 
     // Initialize tooltips (if needed)
     const tooltipElements = document.querySelectorAll('[data-tooltip]');
