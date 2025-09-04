@@ -574,7 +574,7 @@ body {
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 84.615%), 
                 linear-gradient(132.652deg, rgba(24, 36, 67, 0.4) 29.826%, rgba(69, 74, 54, 0.8) 74.257%), 
-                url('./assets/images/hero-bg.png');
+                url('../assets/images/hero-bg.png');
     background-size: auto, auto, 100% 155.19%;
     background-position: 0% 0%, 0% 0%, 0% 65.75%;
     height: 696px;

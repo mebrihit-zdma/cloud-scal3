@@ -156,7 +156,7 @@
     top: 40%;
     width: 15px;
     height: 15px;
-    background-image: url('./assets/icons/arrow-link-black.svg');
+    background-image: url('../assets/icons/arrow-link-black.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }

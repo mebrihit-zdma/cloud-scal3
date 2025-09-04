@@ -48,7 +48,7 @@ body {
     display: flex;
     align-items: center;
     padding: 121px 100px 86px 100px;
-    background: url('assets/images/hero-ai-bg.svg');
+    background: url('../assets/images/hero-ai-bg.svg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
