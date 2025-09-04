@@ -20,37 +20,37 @@ function initPersonasTabs() {
     // Persona data - you can expand this with more personas
     const personas = {
         'Financial Admins': {
-            icon: 'http://localhost:3845/assets/4a7f56018becfeaf7518986709ef838fb4de92a5.svg',
+            icon: './assets/images/persona-financial-admins.svg',
             title: 'Financial Admins',
             description: 'Financial Admins play a key role in FinOps Center. They have Ownership over many of the key CFM process and have visibility across financial budgets.'
         },
         'Vendor Management': {
-            icon: 'http://localhost:3845/assets/4a7f56018becfeaf7518986709ef838fb4de92a5.svg',
+            icon: './assets/images/persona-vendor-management.svg',
             title: 'Vendor Management',
             description: 'Vendor Management teams oversee AWS relationships and contracts, ensuring optimal pricing and service levels.'
         },
         'Business Unit': {
-            icon: 'http://localhost:3845/assets/4a7f56018becfeaf7518986709ef838fb4de92a5.svg',
+            icon: './assets/images/persona-business-unit.svg',
             title: 'Business Unit',
             description: 'Business Unit leaders manage budgets and spending for their specific organizational units.'
         },
         'Department Manager': {
-            icon: 'http://localhost:3845/assets/4a7f56018becfeaf7518986709ef838fb4de92a5.svg',
+            icon: './assets/images/persona-department-manager.svg',
             title: 'Department Manager',
             description: 'Department Managers oversee cloud spending within their departments and ensure budget compliance.'
         },
         'Portfolio Manager': {
-            icon: 'http://localhost:3845/assets/4a7f56018becfeaf7518986709ef838fb4de92a5.svg',
+            icon: './assets/images/persona-portfolio-manager.svg',
             title: 'Portfolio Manager',
             description: 'Portfolio Managers handle multiple projects and ensure overall cloud cost optimization.'
         },
         'Product Owners': {
-            icon: 'http://localhost:3845/assets/4a7f56018becfeaf7518986709ef838fb4de92a5.svg',
+            icon: './assets/images/persona-product-owners.svg',
             title: 'Product Owners',
             description: 'Product Owners manage cloud resources for their products and ensure cost-effective development.'
         },
         'Cloud Engineers': {
-            icon: 'http://localhost:3845/assets/4a7f56018becfeaf7518986709ef838fb4de92a5.svg',
+            icon: './assets/images/persona-cloud-engineers.svg',
             title: 'Cloud Engineers',
             description: 'Cloud Engineers implement and maintain cloud infrastructure while optimizing costs.'
         }
