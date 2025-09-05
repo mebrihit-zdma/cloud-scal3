@@ -193,7 +193,7 @@ body {
 
 /* Why Section */
 .why-section {
-    padding: 96px 100px;
+    padding: 80px 100px 40px 100px;
 }
 
 .why-content {
@@ -274,7 +274,7 @@ body {
 
 /* Simplifies Section */
 .simplifies-section {
-    padding: 101px 0;
+    padding: 40px 0;
     background-color: #151515;
 }
 
@@ -406,7 +406,7 @@ body {
 .features-section {
     padding: 48px 64px;
     border-radius: 48px;
-    margin: 0 20px;
+    margin: 40px 20px 80px 20px;
     background: linear-gradient(126deg, #EDDDB6 15.76%, #C9FFE6 50.46%, #A5C7FA 95.96%);
 }
 
@@ -454,6 +454,16 @@ body {
     display: flex;
     gap: 16px;
     margin-bottom: 40px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; 
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin;
+    scrollbar-color: #aaa transparent; /* thumb | track */
+    /* -ms-overflow-style: none;  */
+    /* -ms-overflow-style: none;  */
 }
 
 .tab {
@@ -589,6 +599,13 @@ body {
     height: 289px;
     background-color: #ffffff;
     border-radius: 12px;
+}
+.thumbnail-grid img {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 /* Better Together Section */
@@ -793,7 +810,7 @@ body {
     }
     
     .why-section {
-        padding: 96px 50px;
+        padding: 80px 50px 40px 50px;
     }
     
     .simplifies-grid {
