@@ -362,10 +362,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.faq-item.active .faq-icon {
-    transform: rotate(45deg);
-}
-
 .faq-answer {
     padding: 0 36px 24px 36px;
     font-size: 24px;

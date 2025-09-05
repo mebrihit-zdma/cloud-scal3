@@ -29,19 +29,27 @@ document.addEventListener('DOMContentLoaded', function() {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
         
-        if (question && answer) {
+        if (question && answer && icon) {
             question.addEventListener('click', function() {
                 const isActive = item.classList.contains('active');
                 
-                // Close all FAQ items
+                // Close all FAQ items and reset their icons
                 faqItems.forEach(faqItem => {
                     faqItem.classList.remove('active');
+                    const faqIcon = faqItem.querySelector('.faq-icon');
+                    if (faqIcon) {
+                        faqIcon.src = 'assets/icons/plus-icon-black.svg';
+                        faqIcon.alt = 'Expand';
+                    }
                 });
                 
                 // Open clicked item if it wasn't active
                 if (!isActive) {
                     item.classList.add('active');
+                    icon.src = 'assets/icons/minus-icon-black.svg';
+                    icon.alt = 'Collapse';
                 }
             });
         }
