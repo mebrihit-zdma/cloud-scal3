@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
+        const icon = question.querySelector('.faq-icon');
         
         question.addEventListener('click', function() {
             const isActive = item.classList.contains('active');
@@ -46,11 +47,28 @@ document.addEventListener('DOMContentLoaded', function() {
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
+                    // Reset icon to plus for closed items
+                    const otherIcon = otherItem.querySelector('.faq-icon');
+                    if (otherIcon) {
+                        otherIcon.src = './assets/icons/plus-icon-black.svg';
+                        otherIcon.alt = 'expand';
+                    }
                 }
             });
             
             // Toggle current item
             item.classList.toggle('active');
+            
+            // Update icon based on state
+            if (icon) {
+                if (item.classList.contains('active')) {
+                    icon.src = './assets/icons/minus-icon-black.svg';
+                    icon.alt = 'collapse';
+                } else {
+                    icon.src = './assets/icons/plus-icon-black.svg';
+                    icon.alt = 'expand';
+                }
+            }
             
             // Smooth scroll to the expanded answer if it's being opened
             if (!isActive) {

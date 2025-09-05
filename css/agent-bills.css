@@ -305,6 +305,7 @@ body {
     font-size: 27.2px;
     margin-bottom: 80px;
     line-height: 1.56;
+    color: rgba(255, 255, 255, 0.6);
   
 }
 .section-header-way-agent {
@@ -692,9 +693,9 @@ body {
     flex-shrink: 0;
 }
 
-.faq-item.active .faq-icon {
+/* .faq-item.active .faq-icon {
     transform: rotate(45deg);
-}
+} */
 
 .faq-answer {
     max-height: 0;
