@@ -458,7 +458,7 @@ body {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap; 
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     -webkit-overflow-scrolling: touch; 
     scrollbar-width: thin;
     scrollbar-color: #aaa transparent; /* thumb | track */

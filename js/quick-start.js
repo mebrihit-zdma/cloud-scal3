@@ -1,20 +1,7 @@
 // Quick Start Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for anchor links
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+    // Removed smooth scrolling for anchor links
 
     // Button click handlers
     const ctaButtons = document.querySelectorAll('.cta-button, .btn');
@@ -72,29 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Trigger animation when page loads
     setTimeout(animateActivityCards, 500);
 
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe sections for scroll animations
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(section);
-    });
+    // Removed intersection observer for scroll animations
 
     // Form validation (if any forms are added later)
     const forms = document.querySelectorAll('form');
@@ -106,55 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add scroll to top functionality
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background-color: var(--primary-green);
-        color: var(--dark-gray);
-        border: none;
-        border-radius: 50%;
-        font-size: 24px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
-    `;
+    // Removed scroll to top functionality
 
-    document.body.appendChild(scrollToTopBtn);
-
-    // Show/hide scroll to top button
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.style.opacity = '1';
-            scrollToTopBtn.style.visibility = 'visible';
-        } else {
-            scrollToTopBtn.style.opacity = '0';
-            scrollToTopBtn.style.visibility = 'hidden';
-        }
-    });
-
-    // Scroll to top functionality
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Add hover effect for scroll to top button
-    scrollToTopBtn.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-2px) scale(1.1)';
-    });
-
-    scrollToTopBtn.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
+    // Removed hover effects for scroll to top button
 });

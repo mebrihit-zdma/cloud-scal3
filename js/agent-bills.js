@@ -82,22 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scrolling for anchor links
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+    // Removed smooth scrolling for anchor links
 
     // Button hover effects
     const buttons = document.querySelectorAll('.btn, .cta-button');
@@ -129,29 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //     });
     // });
 
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.feature-card, .benefit-card, .stat-card');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
+    // Removed intersection observer for animations
 
     // Form handling for demo requests
     const demoButtons = document.querySelectorAll('.btn-white');
@@ -201,49 +164,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Scroll to top functionality
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
+    // Removed scroll to top functionality
 
-    // Add scroll to top button when scrolled down
-    let scrollToTopButton = document.createElement('button');
-    scrollToTopButton.innerHTML = '↑';
-    scrollToTopButton.className = 'scroll-to-top';
-    scrollToTopButton.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background-color: var(--primary-green);
-        color: var(--dark-gray);
-        border: none;
-        border-radius: 50%;
-        font-size: 24px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
-    `;
-    
-    document.body.appendChild(scrollToTopButton);
-    
-    scrollToTopButton.addEventListener('click', scrollToTop);
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollToTopButton.style.opacity = '1';
-            scrollToTopButton.style.visibility = 'visible';
-        } else {
-            scrollToTopButton.style.opacity = '0';
-            scrollToTopButton.style.visibility = 'hidden';
-        }
-    });
+    // Removed scroll to top button
 
     // Performance optimization: Lazy loading for images
     const images = document.querySelectorAll('img[data-src]');

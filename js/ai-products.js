@@ -1,22 +1,7 @@
 // AI Products Page JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for anchor links
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+    // Removed smooth scrolling for anchor links
 
     // Navigation menu interactions
     const menuItems = document.querySelectorAll('.menu-item');
@@ -79,39 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Parallax effect for hero section
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            heroSection.style.transform = `translateY(${rate}px)`;
-        });
-    }
+    // Removed parallax effect for hero section
 
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.section-title, .process-main-title, .architecture-content, .featured-article');
-    animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(element);
-    });
+    // Removed intersection observer for animations
 
     // Mobile menu toggle (if needed)
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -175,17 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Performance optimization: Debounce scroll events
-    let scrollTimeout;
-    window.addEventListener('scroll', function() {
-        if (scrollTimeout) {
-            clearTimeout(scrollTimeout);
-        }
-        
-        scrollTimeout = setTimeout(function() {
-            // Add any scroll-based logic here
-        }, 100);
-    });
+    // Removed scroll event optimization
 
     // Add CSS classes for enhanced interactions
     document.body.classList.add('js-enabled');

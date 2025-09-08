@@ -7,22 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         heroSection.style.opacity = '1';
         heroSection.style.transform = 'translateY(0)';
     }
-    // Smooth scrolling for anchor links
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+    // Removed smooth scrolling for anchor links
 
     // FAQ Accordion functionality
     const faqItems = document.querySelectorAll('.faq-item');
@@ -138,39 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // Removed scroll animations
 
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for scroll animations
-    const animatedElements = document.querySelectorAll('.service-card, .faq-item, .article-item, .featured-article');
-    animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(element);
-    });
-
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const heroSection = document.querySelector('.hero-section');
-        if (heroSection) {
-            const rate = scrolled * -0.5;
-            heroSection.style.transform = `translateY(${rate}px)`;
-        }
-    });
+    // Removed parallax effect for hero section
 
     // Mobile menu toggle (if needed)
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -208,37 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     images.forEach(img => imageObserver.observe(img));
 
-    // Smooth reveal animations for sections
-    const sections = document.querySelectorAll('section');
-    const sectionObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-        // Only apply animation to sections that are not the hero section
-        if (!section.classList.contains('hero-section')) {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        }
-        sectionObserver.observe(section);
-    });
-
-    // Fallback: ensure all sections are visible after 2 seconds if intersection observer fails
-    setTimeout(() => {
-        sections.forEach(section => {
-            if (section.style.opacity === '0') {
-                section.style.opacity = '1';
-                section.style.transform = 'translateY(0)';
-            }
-        });
-    }, 2000);
+    // Removed smooth reveal animations for sections
 
     // Initialize tooltips (if needed)
     const tooltipElements = document.querySelectorAll('[data-tooltip]');
