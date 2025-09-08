@@ -446,6 +446,7 @@ body {
         padding: 121px 20px;
         background-size: cover;
         background-position: center;
+        margin-top: 0px;
     }
     
     .hero-title {
