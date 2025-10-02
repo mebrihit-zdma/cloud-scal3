@@ -854,8 +854,8 @@ body {
 }
 
 .mission-icon img {
-    /* width: 36.2px;
-    height: 36.2px; */
+    width: 36.2px;
+    height: 36.2px;
 }
 
 .mission-item h4 {
@@ -1513,6 +1513,8 @@ body {
 @media (max-width: 1200px) {
     .hero {
         padding: 0 50px;
+        background-size: cover, cover, cover;
+        background-position: center, center, center;
     }
     
     .hero-title {
@@ -1560,6 +1562,13 @@ body {
     }
     
     .learn-more-btn {
+        padding: 14px 20px;
+        font-size: 18px;
+        border-radius: 28px;
+        margin-top: 30px;
+    }
+    
+    .learn-more-card-btn {
         padding: 14px 20px;
         font-size: 18px;
         border-radius: 28px;
@@ -1641,6 +1650,11 @@ body {
         width: 65px;
         height: 65px;
         border-radius: 25px;
+    }
+    
+    .mission-icon img {
+        width: 32px;
+        height: 32px;
     }
     
     .mission-item h4 {
@@ -1907,6 +1921,8 @@ body {
         padding: 0 20px;
         height: 500px;
         margin-top: 0px;
+        background-size: cover, cover, cover;
+        background-position: center, center, center;
     }
     
     .hero-title {
@@ -1996,6 +2012,13 @@ body {
         margin-top: 25px;
     }
     
+    .learn-more-card-btn {
+        padding: 10px 16px;
+        font-size: 16px;
+        border-radius: 25px;
+        margin-top: 25px;
+    }
+    
     /* Service Cards Mobile Styles */
     .service-card {
         padding: 20px 15px;
@@ -2071,6 +2094,11 @@ body {
         width: 55px;
         height: 55px;
         border-radius: 20px;
+    }
+    
+    .mission-icon img {
+        width: 28px;
+        height: 28px;
     }
     
     .mission-item h4 {
@@ -2418,6 +2446,16 @@ body {
 
 /* Small Mobile Responsive Styles */
 @media (max-width: 480px) {
+    .hero {
+        height: 400px;
+        background-size: cover, cover, cover;
+        background-position: center, center, center;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
     .resources {
         padding: 40px 15px;
     }
@@ -2593,6 +2631,13 @@ body {
         margin-top: 20px;
     }
     
+    .learn-more-card-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 22px;
+        margin-top: 20px;
+    }
+    
     /* Service Cards Responsive Styles for AWS MP page */
     .service-card {
         padding: 20px 15px;
@@ -2748,6 +2793,11 @@ body {
         width: 45px;
         height: 45px;
         border-radius: 15px;
+    }
+    
+    .mission-icon img {
+        width: 24px;
+        height: 24px;
     }
     
     .mission-item h4 {

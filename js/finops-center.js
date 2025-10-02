@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // initDropdownMenu(); // Removed - using click-based dropdowns from script.js
     initSmoothScrolling();
     initButtonHoverEffects();
+    initMobileOptimizations();
+    initTouchInteractions();
 });
 
 // Personas Tabs Functionality
@@ -84,13 +86,59 @@ function initPersonasTabs() {
     });
 }
 
-// Carousel Navigation Functionality (Button Only)
+// Carousel Navigation Functionality (Button + Touch)
 function initNavigationDots() {
     const gridContainer = document.querySelector('.simplifies-grid-container');
     const cards = document.querySelectorAll('.simplify-card');
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
     
+    if (!gridContainer) return;
+    
+    // Check if mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // Mobile: Use native scrolling with touch support
+        initMobileCarousel(gridContainer, cards);
+    } else {
+        // Desktop: Use button navigation
+        initDesktopCarousel(gridContainer, cards, prevButton, nextButton);
+    }
+}
+
+function initMobileCarousel(gridContainer, cards) {
+    // Enable smooth scrolling for mobile
+    gridContainer.style.scrollBehavior = 'smooth';
+    
+    // Add touch event listeners for better mobile experience
+    let startX = 0;
+    let scrollLeft = 0;
+    let isScrolling = false;
+    
+    gridContainer.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].pageX - gridContainer.offsetLeft;
+        scrollLeft = gridContainer.scrollLeft;
+        isScrolling = true;
+    });
+    
+    gridContainer.addEventListener('touchmove', function(e) {
+        if (!isScrolling) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - gridContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed multiplier
+        gridContainer.scrollLeft = scrollLeft - walk;
+    });
+    
+    gridContainer.addEventListener('touchend', function() {
+        isScrolling = false;
+    });
+    
+    // Add momentum scrolling for iOS
+    gridContainer.style.webkitOverflowScrolling = 'touch';
+}
+
+function initDesktopCarousel(gridContainer, cards, prevButton, nextButton) {
     // Calculate card width including gap
     const cardWidth = 503; // Width from CSS
     const gap = 10; // Gap from CSS
@@ -226,3 +274,192 @@ function initImageErrorHandling() {
 document.addEventListener('DOMContentLoaded', function() {
     initImageErrorHandling();
 });
+
+// Mobile Optimizations
+function initMobileOptimizations() {
+    // Add mobile-specific optimizations
+    if (window.innerWidth <= 768) {
+        // Optimize images for mobile
+        optimizeImagesForMobile();
+        
+        // Add mobile-specific event listeners
+        addMobileEventListeners();
+        
+        // Optimize performance for mobile
+        optimizePerformanceForMobile();
+    }
+}
+
+function optimizeImagesForMobile() {
+    const images = document.querySelectorAll('img');
+    const videos = document.querySelectorAll('video');
+    
+    images.forEach(img => {
+        // Add loading="lazy" for better performance
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+        
+        // Optimize image sizes for mobile
+        if (img.src.includes('.svg')) {
+            img.style.maxWidth = '100%';
+            img.style.height = 'auto';
+        }
+    });
+    
+    videos.forEach(video => {
+        // Add preload="metadata" for better performance
+        if (!video.hasAttribute('preload')) {
+            video.setAttribute('preload', 'metadata');
+        }
+        
+        // Add loading="lazy" for videos
+        if (!video.hasAttribute('loading')) {
+            video.setAttribute('loading', 'lazy');
+        }
+    });
+}
+
+function addMobileEventListeners() {
+    // Add touch event listeners for better mobile interaction
+    const interactiveElements = document.querySelectorAll('.btn, .tab, .simplify-card');
+    
+    interactiveElements.forEach(element => {
+        element.addEventListener('touchstart', function() {
+            this.classList.add('touch-active');
+        });
+        
+        element.addEventListener('touchend', function() {
+            setTimeout(() => {
+                this.classList.remove('touch-active');
+            }, 150);
+        });
+    });
+}
+
+function optimizePerformanceForMobile() {
+    // Reduce animations on mobile for better performance
+    const style = document.createElement('style');
+    style.textContent = `
+        @media (max-width: 768px) {
+            * {
+                animation-duration: 0.2s !important;
+                transition-duration: 0.2s !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Touch Interactions
+function initTouchInteractions() {
+    // Add touch-friendly interactions
+    addTouchFeedback();
+    addSwipeGestures();
+    optimizeScrollBehavior();
+}
+
+function addTouchFeedback() {
+    // Add visual feedback for touch interactions
+    const touchElements = document.querySelectorAll('.btn, .tab, .simplify-card, .pricing-card');
+    
+    touchElements.forEach(element => {
+        element.addEventListener('touchstart', function(e) {
+            this.style.transform = 'scale(0.98)';
+            this.style.transition = 'transform 0.1s ease';
+        });
+        
+        element.addEventListener('touchend', function(e) {
+            this.style.transform = 'scale(1)';
+        });
+        
+        element.addEventListener('touchcancel', function(e) {
+            this.style.transform = 'scale(1)';
+        });
+    });
+}
+
+function addSwipeGestures() {
+    // Add swipe gestures for carousel
+    const carousel = document.querySelector('.simplifies-grid-container');
+    if (!carousel) return;
+    
+    let startX = 0;
+    let startY = 0;
+    let distX = 0;
+    let distY = 0;
+    
+    carousel.addEventListener('touchstart', function(e) {
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+    });
+    
+    carousel.addEventListener('touchmove', function(e) {
+        if (!startX || !startY) return;
+        
+        const touch = e.touches[0];
+        distX = touch.clientX - startX;
+        distY = touch.clientY - startY;
+        
+        // Determine if this is a horizontal swipe
+        if (Math.abs(distX) > Math.abs(distY)) {
+            e.preventDefault();
+        }
+    });
+    
+    carousel.addEventListener('touchend', function(e) {
+        if (Math.abs(distX) > 50 && Math.abs(distX) > Math.abs(distY)) {
+            // Horizontal swipe detected
+            if (distX > 0) {
+                // Swipe right - scroll left
+                this.scrollLeft -= 300;
+            } else {
+                // Swipe left - scroll right
+                this.scrollLeft += 300;
+            }
+        }
+        
+        startX = 0;
+        startY = 0;
+        distX = 0;
+        distY = 0;
+    });
+}
+
+function optimizeScrollBehavior() {
+    // Optimize scroll behavior for mobile
+    let ticking = false;
+    
+    function updateScrollPosition() {
+        // Add any scroll-based optimizations here
+        ticking = false;
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollPosition);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
+}
+
+// Responsive handling
+function handleResize() {
+    // Reinitialize components on resize
+    if (window.innerWidth <= 768) {
+        initMobileCarousel(document.querySelector('.simplifies-grid-container'), document.querySelectorAll('.simplify-card'));
+    } else {
+        initDesktopCarousel(
+            document.querySelector('.simplifies-grid-container'), 
+            document.querySelectorAll('.simplify-card'),
+            document.querySelector('.carousel-prev'),
+            document.querySelector('.carousel-next')
+        );
+    }
+}
+
+// Add resize listener
+window.addEventListener('resize', handleResize);
