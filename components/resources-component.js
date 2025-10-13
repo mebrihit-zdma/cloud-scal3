@@ -41,7 +41,10 @@ class ResourcesComponent extends HTMLElement {
                     <div class="resource-item-content">
                         <h4>AWS Partner Programs: Maximizing Your MAP Benefits</h4>
                         <div class="resource-item-meta">
-                            <span class="resource-tag">Marketing</span>
+                            <span class="resource-tag" style=" color: #D7F1D3;
+                            background: rgba(215, 241, 211, 0.48);" >
+                                Marketing
+                            </span>
                             <span class="resource-date">Apr 3 · 7 min read</span>
                         </div>
                     </div>
@@ -53,7 +56,9 @@ class ResourcesComponent extends HTMLElement {
                     <div class="resource-item-content">
                         <h4>AWS Marketplace Success: From Idea to $1M ARR in 18 Months</h4>
                         <div class="resource-item-meta">
-                            <span class="resource-tag">Business</span>
+                            <span class="resource-tag" style="color: #A6C8FA;
+                            background: rgba(166, 200, 250, 0.48);">
+                            Business</span>
                             <span class="resource-date">May 13 · 5 min read</span>
                         </div>
                     </div>
