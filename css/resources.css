@@ -694,7 +694,9 @@
         margin-bottom: 40px;
         border-radius: 16px;
     }
-    
+    .featured-resource-card {
+        padding: 20px;
+    }
     .page-title {
         margin: 40px 0 0px 0;
     }
