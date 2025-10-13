@@ -817,6 +817,7 @@ body {
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
+        margin: 0;
     }
     
     .main-menu {
@@ -1416,7 +1417,7 @@ body {
     }
     
     .we-do-section {
-        padding: 40px 0;
+        padding: 40px 0px;
     }
     
     .process-section {
